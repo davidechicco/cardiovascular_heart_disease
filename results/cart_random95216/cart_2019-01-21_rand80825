@@ -1,0 +1,23 @@
+Read data from file ../data/dataset_edited_without_time_NORM.csv
+perce_training_set = 80%[1] "dim(training_set)"
+[1] 239  12
+[1] "dim(test_set)"
+[1] 60 12
+
+PR AUC (integral) 	0.4787283
+ROC AUC 		0.65
+
+
+TOTAL:
+
+ FN =  10  /  20 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  20 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  8  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@        +0.31  	  0.53  	  0.70  	  0.50  	  0.80 		  0.48 		 0.65 
+

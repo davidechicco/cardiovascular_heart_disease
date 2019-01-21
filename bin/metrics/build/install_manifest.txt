@@ -1,0 +1,3 @@
+/root/torch/install/lib/luarocks/rocks/metrics/scm-0/lua/metrics/init.lua
+/root/torch/install/lib/luarocks/rocks/metrics/scm-0/lua/metrics/roc.lua
+/root/torch/install/lib/luarocks/rocks/metrics/scm-0/lua/metrics/test.lua

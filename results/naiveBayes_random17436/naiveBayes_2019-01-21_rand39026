@@ -1,0 +1,28 @@
+threshold = 0.5
+Read data from file ../data/dataset_edited_without_time_NORM.csv
+training_set_perce = 80%
+[Creating the subsets for the values]
+[Creating the subsets for the labels "1"-"0"]
+[1] "dim(patients_data_train)"
+[1] 239  12
+[1] "dim(patients_data_test)"
+[1] 60 12
+
+PR AUC (integral) 	0.4930487
+ROC AUC 		0.6636714
+
+
+TOTAL:
+
+ FN =  10  /  19 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  19 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  6  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  35  /  41 	 (truth == 0) & (prediction < threshold)
+
+0.3516572Ciao
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.35 	 0.53 	 0.73 	 0.47 	 0.85		 0.49		0.66
+

@@ -104,7 +104,7 @@ cat("\n[Training the random forest classifier on the training set]\n")
 allFeaturesFormula <- death_event ~ .
 thisFormulaTop2features <- death_event ~ serum_creatinine + ejection_fraction
 thisFormulaTop3features <- death_event ~ serum_creatinine + ejection_fraction + age
-selectedFormula <- thisFormulaTop2features
+selectedFormula <- allFeaturesFormula
 
 rf_new <- randomForest(selectedFormula, data=patients_data_train, importance=TRUE, proximity=TRUE)
 cat("\nFeatures used in this prediction: \t", as.character(selectedFormula), "\n\n", sep="")

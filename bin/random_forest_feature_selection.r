@@ -1,15 +1,26 @@
 
 
-library("randomForest");
+list.of.packages <- c("randomForest","ggplot2")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
 
-fileName <- "../data/dataset_edited_without_time_NORM.csv"
-patients_data_nrom <- read.csv(fileName, header = TRUE, sep =",");
+library("randomForest")
+library("ggplot2")
+
+
+fileNameData<- "../data/dataset_edited_without_time.csv"
+patients_data <- read.csv(fileNameData, header = TRUE, sep =",");
+cat("Read data from file ", fileNameData, "\n", sep="")
+
+fileNameDataNorm <- "../data/dataset_edited_without_time_NORM.csv"
+patients_data_norm <- read.csv(fileNameDataNorm, header = TRUE, sep =",");
+cat("Read data from file ", fileNameDataNorm, "\n", sep="")
 
 num_to_return <- 1
 exe_num <- sample(1:as.numeric(Sys.time()), num_to_return)
 
 
-rf_output <- randomForest(death_event ~ ., data=patients_data_nrom, importance=TRUE, proximity=TRUE)
+rf_output <- randomForest(death_event ~ ., data=patients_data_norm, importance=TRUE, proximity=TRUE)
 
 dd <- as.data.frame(rf_output$importance);
 
@@ -96,11 +107,11 @@ pdfWidth <- 12 # inches
 
 pdfFile_dfFile_plot_death_age <- paste("../results/scatterplot_serum_creatinine_VS_ejection_fraction_", exe_num, ".pdf", sep="")
 pdf(pdfFile_dfFile_plot_death_age, height=pdfHeight, width=pdfWidth)
-ggplot(patients_data_norm, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  +  labs(colour="patient status", size="")
+ggplot(patients_data, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  +  labs(colour="patient status", size="") + theme(text = element_text(size=30))
 dev.off()
 
 
 pdfFile_dfFile_plot_death_age_withLine <- paste("../results/scatterplot_serum_creatinine_VS_ejection_fraction_withLine_", exe_num, ".pdf", sep="")
 pdf(pdfFile_dfFile_plot_death_age_withLine, height=pdfHeight, width=pdfWidth)
-ggplot(patients_data_norm, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  +  labs(colour="patient status", size="") + geom_abline(intercept = 0.01, linetype="dashed")
+ggplot(patients_data, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  +  labs(colour="patient status", size="") + geom_abline(intercept = 0.01, slope = 15, linetype="dashed") + theme(text = element_text(size=30))
 dev.off()

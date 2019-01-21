@@ -79,15 +79,15 @@ for(thisK in 1:maxK)
   # train on the training set, evaluate in the validation set by computing the MCC
   # save the MCC corresponding to the current K value
   
-  cat("\n[Training the kNN model (with k=",thisK,") on training set & applying the kNN model to validation set]\n", sep="")
-  
-  cancer_data_validation_pred <- knn(train = cancer_data_train, test = cancer_data_validation, cl = cancer_data_train_labels, k=thisK)
-  cancer_data_validation_pred_binary <- as.numeric (cancer_data_validation_pred)-1
-   
-  mcc_outcome <- mcc(cancer_data_validation_labels, cancer_data_validation_pred_binary)
-  cat("When k=",thisK,", the MCC value is ",mcc_outcome, "\t (worst possible: -1; best possible: +1)\n", sep="")
-  
-  mcc_array[thisK] <- mcc_outcome
+        cat("\n[Training the kNN model (with k=",thisK,") on training set & applying the kNN model to validation set]\n", sep="")
+        
+        cancer_data_validation_pred <- knn(train = cancer_data_train, test = cancer_data_validation, cl = cancer_data_train_labels, k=thisK)
+        cancer_data_validation_pred_binary <- as.numeric (cancer_data_validation_pred)-1
+        
+        mcc_outcome <- mcc(cancer_data_validation_labels, cancer_data_validation_pred_binary)
+        cat("When k=",thisK,", the MCC value is ",mcc_outcome, "\t (worst possible: -1; best possible: +1)\n", sep="")
+        
+        mcc_array[thisK] <- mcc_outcome
   
 }
 

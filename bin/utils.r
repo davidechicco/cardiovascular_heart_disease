@@ -8,9 +8,23 @@ dec_two <- function(x) {
 # function that prints two decimals of a number with sign
 signed_dec_two <- function(x) {
 
-   if (x>0) { sign <- "+";  }   
- 
-  return (paste(sign, (format(round(x, 2), nsmall = 2)), sep=""))
+if (is.finite(x)) {
+
+                if (x>0) { 
+                    
+                        sign <- "+";   
+                        return (paste(sign, toString(format(round(x, 2), nsmall = 2)), sep=""))
+                
+                    } else {
+                    
+                            return (dec_two(x))
+                    }    
+    } else {
+    
+    
+    return ("indef")
+    
+    }
 }
 
 

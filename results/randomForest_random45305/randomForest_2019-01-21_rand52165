@@ -1,0 +1,51 @@
+fileName = ../data/dataset_edited_without_time_NORM.csv
+[Randomizing the Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+ataset]
+[class: 0  #elements = 203]
+67.89%
+[class: 1  #elements = 96]
+32.11%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+[training set dimensions:  239  patients]
+[test set dimensions:  60  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 239 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 161]
+67.36%
+[class: 1  #elements = 78]
+32.64%
+
+
+[Training the random forest classifier on the training set]
+
+Features used in this prediction: 	death_event ~ .
+
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6285316
+ROC AUC 		0.8544974
+
+
+TOTAL:
+
+ FN =  7  /  18 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  18 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  6  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  36  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.48 	 0.63 	 0.78 	 0.61 	 0.86		 0.63		0.85
+

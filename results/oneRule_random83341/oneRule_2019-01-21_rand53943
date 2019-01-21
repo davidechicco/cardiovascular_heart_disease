@@ -1,0 +1,68 @@
+fileName = ../data/dataset_edited_without_time_NORM.csv
+training_set_perce = 80
+[Creating the subsets for the values]
+[1] "dim(patients_data_train)"
+[1] 239  12
+[1] "dim(patients_data_test)"
+[1] 60 12
+
+    Attribute                Accuracy
+1 * ejection_fraction        73.64%  
+2   age                      72.8%   
+2   serum_creatinine         72.8%   
+4   serum_sodium             68.2%   
+5   gender                   67.36%  
+5   smoking                  67.36%  
+5   diabetes                 67.36%  
+5   blood_pressure           67.36%  
+5   anaemia                  67.36%  
+5   platelets                67.36%  
+5   creatinine_phosphokinase 67.36%  
+---
+Chosen attribute due to accuracy
+and ties method (if applicable): '*'
+
+
+Call:
+OneR.data.frame(x = patients_data_train, verbose = TRUE)
+
+Rules:
+If ejection_fraction = (-0.001,0.2] then death_event = 1
+If ejection_fraction = (0.2,0.4]    then death_event = 0
+If ejection_fraction = (0.4,0.6]    then death_event = 0
+If ejection_fraction = (0.6,0.8]    then death_event = 0
+If ejection_fraction = (0.8,1]      then death_event = 0
+
+Accuracy:
+176 of 239 instances classified correctly (73.64%)
+
+Contingency table:
+           ejection_fraction
+death_event (-0.001,0.2] (0.2,0.4] (0.4,0.6] (0.6,0.8] (0.8,1] Sum
+        0              3      * 67      * 52      * 37     * 2 161
+        1           * 18        31        20         7       2  78
+        Sum           21        98        72        44       4 239
+---
+Maximum in each column: '*'
+
+Pearson's Chi-squared test:
+X-squared = 33.877, df = 4, p-value = 7.898e-07
+
+
+PR AUC (integral) 	0.4318141
+ROC AUC 		0.5555556
+
+
+TOTAL:
+
+ FN =  16  /  18 	 (truth == 1) & (prediction < threshold)
+ TP =  2  /  18 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  0  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  42  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@        +0.28  	  0.20  	  0.73  	  0.11  	  1.00 		  0.43 		 0.56 
+

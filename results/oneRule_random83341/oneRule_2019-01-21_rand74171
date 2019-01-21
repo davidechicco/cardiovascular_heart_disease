@@ -1,0 +1,68 @@
+fileName = ../data/dataset_edited_without_time_NORM.csv
+training_set_perce = 80
+[Creating the subsets for the values]
+[1] "dim(patients_data_train)"
+[1] 239  12
+[1] "dim(patients_data_test)"
+[1] 60 12
+
+    Attribute                Accuracy
+1 * serum_creatinine         74.48%  
+2   ejection_fraction        72.8%   
+3   age                      70.29%  
+4   gender                   66.95%  
+4   smoking                  66.95%  
+4   diabetes                 66.95%  
+4   blood_pressure           66.95%  
+4   anaemia                  66.95%  
+4   serum_sodium             66.95%  
+4   platelets                66.95%  
+4   creatinine_phosphokinase 66.95%  
+---
+Chosen attribute due to accuracy
+and ties method (if applicable): '*'
+
+
+Call:
+OneR.data.frame(x = patients_data_train, verbose = TRUE)
+
+Rules:
+If serum_creatinine = (-0.001,0.2] then death_event = 0
+If serum_creatinine = (0.2,0.4]    then death_event = 0
+If serum_creatinine = (0.4,0.6]    then death_event = 1
+If serum_creatinine = (0.6,0.8]    then death_event = 0
+If serum_creatinine = (0.8,1]      then death_event = 1
+
+Accuracy:
+178 of 239 instances classified correctly (74.48%)
+
+Contingency table:
+           serum_creatinine
+death_event (-0.001,0.2] (0.2,0.4] (0.4,0.6] (0.6,0.8] (0.8,1] Sum
+        0          * 103      * 46         5       * 5       1 160
+        1             26        24      * 20         5     * 4  79
+        Sum          129        70        25        10       5 239
+---
+Maximum in each column: '*'
+
+Pearson's Chi-squared test:
+X-squared = 40.924, df = 4, p-value = 2.787e-08
+
+
+PR AUC (integral) 	0.5123243
+ROC AUC 		0.6354309
+
+
+TOTAL:
+
+ FN =  12  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  5  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  1  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  42  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@        +0.41  	  0.43  	  0.78  	  0.29  	  0.98 		  0.51 		 0.64 
+

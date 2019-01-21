@@ -1,0 +1,70 @@
+fileName = ../data/dataset_edited_without_time_NORM.csv
+[Dataset size]
+number of data instances (rows) = 299 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 203]
+67.89%
+[class: 1  #elements = 96]
+32.11%
+
+training_set_perce = 60% 
+validation_set_perce = 20% 
+test_set_perce = 20% 
+[Creating the subsets for the values]
+[Creating the subsets for the labels "1"-"0"]
+
+[Optimization of the hyper-parameter C start]
+[Training the SVM model (with C=0.001) on training set & applying the SVM model to validation set]
+
+MCC = 0.00
+
+When C=0.001, the MCC value is 0	 (worst possible: -1; best possible: +1)
+[Training the SVM model (with C=0.01) on training set & applying the SVM model to validation set]
+
+MCC = 0.25
+
+When C=0.01, the MCC value is 0.2475433	 (worst possible: -1; best possible: +1)
+[Training the SVM model (with C=0.1) on training set & applying the SVM model to validation set]
+
+MCC = 0.44
+
+When C=0.1, the MCC value is 0.4389739	 (worst possible: -1; best possible: +1)
+[Training the SVM model (with C=1) on training set & applying the SVM model to validation set]
+
+MCC = 0.50
+
+When C=1, the MCC value is 0.4989533	 (worst possible: -1; best possible: +1)
+[Training the SVM model (with C=10) on training set & applying the SVM model to validation set]
+
+MCC = 0.50
+
+When C=10, the MCC value is 0.4989533	 (worst possible: -1; best possible: +1)
+
+The best C value is 1, corresponding to MCC=0.49895325967202
+[Optimization end]
+
+
+ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ 
+
+[Training the SVM model (with the OPTIMIZED hyper-parameter C=1) on training set & applying the SVM to the test set]
+
+PR AUC (integral) 	0.5468816
+ROC AUC 		0.7698413
+
+
+TOTAL:
+
+ FN =  14  /  18 	 (truth == 1) & (prediction < threshold)
+ TP =  4  /  18 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  3  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  39  /  42 	 (truth == 0) & (prediction < threshold)
+
+0.2152569Ciao
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.22 	 0.32 	 0.72 	 0.22 	 0.93		 0.55		0.77
+

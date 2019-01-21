@@ -1,0 +1,25 @@
+target_index = 12
+training_set_perce = 80%
+[Creating the subsets for the values]
+[Creating the subsets for the labels "1"-"0"]
+
+[Training the linear regression model on training set & applying the linear regression to test set]
+
+PR AUC (integral) 	0.6682944
+ROC AUC 		0.7121034
+
+
+TOTAL:
+
+ FN =  12  /  23 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  23 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  2  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  35  /  37 	 (truth == 0) & (prediction < threshold)
+
+0.5006357Ciao
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.50 	 0.61 	 0.77 	 0.48 	 0.95		 0.67		0.71
+
