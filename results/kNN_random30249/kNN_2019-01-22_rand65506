@@ -1,0 +1,644 @@
+dataFileName = ../data/dataset_edited_without_time_NORM.csv
+[Dataset size]
+number of data instances (rows) = 299 
+number of features (columns) = 12 
+[1] "This vector is not binary. The imbalance_retriever() function will stop here"
+
+[Imbalance of this dataset]
+[class:   #elements = NA]
+NA%
+[class:   #elements = NA]
+NA%
+
+training_set_perce = 60% 
+validation_set_perce = 20% 
+test_set_perce = 20% 
+[Creating the subsets for the values]
+[Creating the subsets for the labels "1"-"0"]
+
+[Optimization of the hyper-parameter k start]
+
+[Training the kNN model (with k=1) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=1, the MCC value is -0.0978232	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=2) on training set & applying the kNN model to validation set]
+
+MCC = -0.15
+
+When k=2, the MCC value is -0.1462211	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=3) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=3, the MCC value is -0.09466074	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=4) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=4, the MCC value is -0.09267505	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=5) on training set & applying the kNN model to validation set]
+
+MCC = 0.02
+
+When k=5, the MCC value is 0.01958864	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=6) on training set & applying the kNN model to validation set]
+
+MCC = -0.03
+
+When k=6, the MCC value is -0.03458572	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=7) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=7, the MCC value is -0.09267505	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=8) on training set & applying the kNN model to validation set]
+
+MCC = -0.15
+
+When k=8, the MCC value is -0.148314	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=9) on training set & applying the kNN model to validation set]
+
+MCC = -0.12
+
+When k=9, the MCC value is -0.1198085	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=10) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=10, the MCC value is -0.09267505	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=11) on training set & applying the kNN model to validation set]
+
+MCC = -0.12
+
+When k=11, the MCC value is -0.1198085	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=12) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=12, the MCC value is -0.09236218	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=13) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=13, the MCC value is -0.09236218	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=14) on training set & applying the kNN model to validation set]
+
+MCC = -0.03
+
+When k=14, the MCC value is -0.02905782	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=15) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=15, the MCC value is -0.09236218	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=16) on training set & applying the kNN model to validation set]
+
+MCC = -0.09
+
+When k=16, the MCC value is -0.09495946	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=17) on training set & applying the kNN model to validation set]
+
+MCC = -0.13
+
+When k=17, the MCC value is -0.1259172	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=18) on training set & applying the kNN model to validation set]
+
+MCC = -0.17
+
+When k=18, the MCC value is -0.1687865	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=19) on training set & applying the kNN model to validation set]
+
+MCC = -0.20
+
+When k=19, the MCC value is -0.1967017	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=20) on training set & applying the kNN model to validation set]
+
+MCC = -0.25
+
+When k=20, the MCC value is -0.2474753	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=21) on training set & applying the kNN model to validation set]
+
+MCC = -0.22
+
+When k=21, the MCC value is -0.2227766	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=22) on training set & applying the kNN model to validation set]
+
+MCC = -0.22
+
+When k=22, the MCC value is -0.2227766	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=23) on training set & applying the kNN model to validation set]
+
+MCC = -0.22
+
+When k=23, the MCC value is -0.2227766	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=24) on training set & applying the kNN model to validation set]
+
+MCC = -0.17
+
+When k=24, the MCC value is -0.1687865	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=25) on training set & applying the kNN model to validation set]
+
+MCC = -0.17
+
+When k=25, the MCC value is -0.1687865	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=26) on training set & applying the kNN model to validation set]
+
+MCC = -0.14
+
+When k=26, the MCC value is -0.1383429	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=27) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=27, the MCC value is -0.1042799	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=28) on training set & applying the kNN model to validation set]
+
+MCC = -0.14
+
+When k=28, the MCC value is -0.1383429	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=29) on training set & applying the kNN model to validation set]
+
+MCC = -0.17
+
+When k=29, the MCC value is -0.1745592	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=30) on training set & applying the kNN model to validation set]
+
+MCC = -0.17
+
+When k=30, the MCC value is -0.1745592	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=31) on training set & applying the kNN model to validation set]
+
+MCC = -0.17
+
+When k=31, the MCC value is -0.1745592	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=32) on training set & applying the kNN model to validation set]
+
+MCC = -0.14
+
+When k=32, the MCC value is -0.141293	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=33) on training set & applying the kNN model to validation set]
+
+MCC = -0.14
+
+When k=33, the MCC value is -0.141293	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=34) on training set & applying the kNN model to validation set]
+
+MCC = -0.14
+
+When k=34, the MCC value is -0.141293	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=35) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=35, the MCC value is -0.09905891	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=36) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=36, the MCC value is -0.09905891	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=37) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=37, the MCC value is -0.09905891	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=38) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=38, the MCC value is -0.09905891	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=39) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=39, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=40) on training set & applying the kNN model to validation set]
+
+MCC = -0.10
+
+When k=40, the MCC value is -0.09905891	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=41) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=41, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=42) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=42, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=43) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=43, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=44) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=44, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=45) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=45, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=46) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=46, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=47) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=47, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=48) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=48, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=49) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=49, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=50) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=50, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=51) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=51, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=52) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=52, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=53) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=53, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=54) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=54, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=55) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=55, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=56) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=56, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=57) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=57, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=58) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=58, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=59) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=59, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=60) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=60, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=61) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=61, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=62) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=62, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=63) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=63, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=64) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=64, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=65) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=65, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=66) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=66, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=67) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=67, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=68) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=68, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=69) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=69, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=70) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=70, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=71) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=71, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=72) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=72, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=73) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=73, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=74) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=74, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=75) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=75, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=76) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=76, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=77) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=77, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=78) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=78, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=79) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=79, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=80) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=80, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=81) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=81, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=82) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=82, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=83) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=83, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=84) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=84, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=85) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=85, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=86) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=86, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=87) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=87, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=88) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=88, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=89) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=89, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=90) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=90, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=91) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=91, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=92) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=92, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=93) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=93, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=94) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=94, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=95) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=95, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=96) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=96, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=97) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=97, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=98) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=98, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=99) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=99, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+[Training the kNN model (with k=100) on training set & applying the kNN model to validation set]
+
+MCC = 0.00
+
+When k=100, the MCC value is 0	 (worst possible: -1; best possible: +1)
+
+The best k value is 5, corresponding to MCC=0.0195886403153338
+[Optimization end]
+
+
+ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ 
+[Training the kNN model (with the OPTIMIZED hyper-parameter k=5) on training set & applying the kNN to the test set]
+
+PR AUC (integral) 	0.332999
+ROC AUC 		0.481685
+
+
+TOTAL:
+
+ FN =  18  /  21 	 (truth == 1) & (prediction < threshold)
+ TP =  3  /  21 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  7  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      -0.05 	 0.19 	 0.58 	 0.14 	 0.82		 0.33		0.48
+

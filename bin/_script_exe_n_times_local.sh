@@ -54,28 +54,28 @@ iteTot=10
 # 
 # 
 # 
-# ############ k-nearest neighbors ############
-# 
-# i=1
-# outputFile=""
-# 
-# random_numberA=$(shuf -i1-100000 -n1)
-# method="kNN"
-# subdir="../results/"$method"_random"$random_numberA"/"
-# mkdir -p $subdir
-# 
-# for i in $( seq 1 $iteTot )
-# do
-# 
-#   echo $i
-#   today=`date +%Y-%m-%d`
-#   random_numberB=$(shuf -i1-100000 -n1)
-#   jobName=$method"_"$today"_rand"$random_numberB
-#   outputFile=$subdir$jobName
-#   /usr/bin/Rscript knn_NewDataset.r  > $outputFile 2> $outputFile
-# done
-# 
-# 
+############ k-nearest neighbors ############
+ 
+i=1
+outputFile=""
+
+random_numberA=$(shuf -i1-100000 -n1)
+method="kNN"
+subdir="../results/"$method"_random"$random_numberA"/"
+mkdir -p $subdir
+
+for i in $( seq 1 $iteTot )
+do
+
+  echo $i
+  today=`date +%Y-%m-%d`
+  random_numberB=$(shuf -i1-100000 -n1)
+  jobName=$method"_"$today"_rand"$random_numberB
+  outputFile=$subdir$jobName
+  /usr/bin/Rscript knn_NewDataset.r  > $outputFile 2> $outputFile
+done
+
+
 # ############ naive bayes ############
 # 
 # i=1
@@ -142,22 +142,42 @@ iteTot=10
 # done
 
 ############ random forest ############
+# 
+# i=1
+# outputFile=""
+# 
+# random_numberA=$(shuf -i1-100000 -n1)
+# method="randomForest"
+# subdir="../results/"$method"_random"$random_numberA"/"
+# mkdir -p $subdir
+# 
+# for i in $( seq 1 $iteTot )
+# do
+# 
+#   echo $i
+#   today=`date +%Y-%m-%d`
+#   random_numberB=$(shuf -i1-100000 -n1)
+#   jobName=$method"_"$today"_rand"$random_numberB
+#   outputFile=$subdir$jobName
+#   /usr/bin/Rscript random_forest_class_NewDataset.r  > $outputFile 2> $outputFile
+# done
 
-i=1
-outputFile=""
 
-random_numberA=$(shuf -i1-100000 -n1)
-method="randomForest"
-subdir="../results/"$method"_random"$random_numberA"/"
-mkdir -p $subdir
-
-for i in $( seq 1 $iteTot )
-do
-
-  echo $i
-  today=`date +%Y-%m-%d`
-  random_numberB=$(shuf -i1-100000 -n1)
-  jobName=$method"_"$today"_rand"$random_numberB
-  outputFile=$subdir$jobName
-  /usr/bin/Rscript random_forest_class_NewDataset.r  > $outputFile 2> $outputFile
-done
+# i=1
+# outputFile=""
+# 
+# random_numberA=$(shuf -i1-100000 -n1)
+# method="neuralNetwork"
+# subdir="../results/"$method"_random"$random_numberA"/"
+# mkdir -p $subdir
+# 
+# for i in $( seq 1 $iteTot )
+# do
+# 
+#   echo $i
+#   today=`date +%Y-%m-%d`
+#   random_numberB=$(shuf -i1-100000 -n1)
+#   jobName=$method"_"$today"_rand"$random_numberB
+#   outputFile=$subdir$jobName
+#   th ann_script_val.lua  > $outputFile 2> $outputFile
+# done

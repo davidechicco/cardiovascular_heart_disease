@@ -80,22 +80,48 @@ dev.off()
 
 pdfFile_plot_death_serum_creatinine <- paste("../results/plot_death_VS_serum_creatinine_", exe_num, ".pdf", sep="")
 pdf(pdfFile_plot_death_serum_creatinine)
-plot_death_serum_creatinine <-  cdplot(factor(death_event, labels=c("alive", "dead")) ~ serum_creatinine, data=patients_data_norm, ylab = NA)
+plot_death_serum_creatinine <-  cdplot(factor(death_event, labels=c("alive", "dead")) ~ serum_creatinine, data=patients_data, ylab = NA)
 dev.off()
 
 pdfFile_plot_death_ejection_fraction <- paste("../results/plot_death_VS_ejection_fraction_", exe_num, ".pdf", sep="")
 pdf(pdfFile_plot_death_ejection_fraction)
-plot_death_ejection_fraction <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ ejection_fraction, data=patients_data_norm, ylab = NA)
+plot_death_ejection_fraction <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ ejection_fraction, data=patients_data, ylab = NA)
 dev.off()
 
-pdfFile_plot_death_age <- paste("../results/plot_death_VS_age_", exe_num, ".pdf", sep="")
-pdf(pdfFile_plot_death_age)
-plot_death_age <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ age,, data=patients_data_norm, ylab = NA)
-dev.off()
+# pdfFile_plot_death_age <- paste("../results/plot_death_VS_age_", exe_num, ".pdf", sep="")
+# pdf(pdfFile_plot_death_age)
+# plot_death_age <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ age,, data=patients_data, ylab = NA)
+# dev.off()
 
+#
+# Pearson correlation coefficient
+#
 pearson_death_serum_creatinine <- cor(patients_data_norm$death_event, patients_data_norm$serum_creatinine, method = c("pearson"))
 pearson_death_ejection_fraction <- cor(patients_data_norm$death_event, patients_data_norm$ejection_fraction, method = c("pearson"))
 pearson_death_age <- cor(patients_data_norm$death_event, patients_data_norm$age, method = c("pearson"))
+
+pearson_death_creatinine_phosphokinase <- cor(patients_data_norm$death_event, patients_data_norm$creatinine_phosphokinase, method = c("pearson"))
+pearson_death_serum_sodium <- cor(patients_data_norm$death_event, patients_data_norm$serum_sodium, method = c("pearson"))
+pearson_death_gender<- cor(patients_data_norm$death_event, patients_data_norm$gender, method = c("pearson"))
+
+pearson_death_platelets <- cor(patients_data_norm$death_event, patients_data_norm$platelets, method = c("pearson"))
+pearson_death_smoking <- cor(patients_data_norm$death_event, patients_data_norm$smoking, method = c("pearson"))
+pearson_death_blood_pressure <- cor(patients_data_norm$death_event, patients_data_norm$blood_pressure, method = c("pearson"))
+
+pearson_death_diabetes <- cor(patients_data_norm$death_event, patients_data_norm$diabetes, method = c("pearson"))
+pearson_death_anaemia <- cor(patients_data_norm$death_event, patients_data_norm$anaemia, method = c("pearson"))
+
+cat("pearson_death_serum_creatinine  = ", pearson_death_serum_creatinine, "\n", sep="")
+cat("pearson_death_ejection_fraction  = ", pearson_death_ejection_fraction, "\n", sep="")
+cat("pearson_death_age  = ", pearson_death_age, "\n", sep="")
+cat("pearson_death_creatinine_phosphokinase  = ", pearson_death_creatinine_phosphokinase, "\n", sep="")
+cat("pearson_death_gender  = ", pearson_death_gender, "\n", sep="")
+cat("pearson_death_platelets  = ", pearson_death_platelets, "\n", sep="")
+cat("pearson_death_smoking  = ", pearson_death_smoking, "\n", sep="")
+cat("pearson_death_blood_pressure  = ", pearson_death_blood_pressure, "\n", sep="")
+cat("pearson_death_diabetes  = ", pearson_death_diabetes, "\n", sep="")
+cat("pearson_death_anaemia  = ", pearson_death_anaemia, "\n", sep="")
+
 
 
 # Print the model tree
@@ -103,7 +129,7 @@ pearson_death_age <- cor(patients_data_norm$death_event, patients_data_norm$age,
 
 dotSize <- 3
 pdfHeight <- 10 # inches
-pdfWidth <- 12 # inches
+pdfWidth <- 20 # inches
 
 pdfFile_dfFile_plot_death_age <- paste("../results/scatterplot_serum_creatinine_VS_ejection_fraction_", exe_num, ".pdf", sep="")
 pdf(pdfFile_dfFile_plot_death_age, height=pdfHeight, width=pdfWidth)
