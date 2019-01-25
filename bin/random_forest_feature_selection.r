@@ -7,6 +7,9 @@ if(length(new.packages)) install.packages(new.packages)
 library("randomForest")
 library("ggplot2")
 
+source("./confusion_matrix_rates.r")
+source("./utils.r")
+
 
 fileNameData<- "../data/dataset_edited_without_time.csv"
 patients_data <- read.csv(fileNameData, header = TRUE, sep =",");
@@ -50,9 +53,10 @@ varImpPlot(rf_output)
 dd_sorted_IncNodePurity_only <- dd_sorted_IncNodePurity
 dd_sorted_IncNodePurity_only$"%IncMSE" <- NULL
 dd_sorted_IncNodePurity_only$pos <- c(1:dim(dd_sorted_IncNodePurity_only)[1])
+dd_sorted_MSE_only <- dd_sorted_MSE
 colnames(dd_sorted_MSE_only)[1] <- c("IncMSE")
 
-dd_sorted_MSE_only <- dd_sorted_MSE
+
 dd_sorted_MSE_only$IncNodePurity <- NULL
 dd_sorted_MSE_only$pos <- c(1:dim(dd_sorted_IncNodePurity_only)[1])
 
@@ -63,29 +67,32 @@ dd_sorted_IncNodePurity_only$features <- rownames(dd_sorted_IncNodePurity_only)
 library("ggplot2")
 # Minimal theme + blue fill color
 
-pdfFileNameMSE <-  paste("../results/barplots/MSE_features_", exe_num, ".pdf", sep="")
+pdfFileNameMSE <-  paste("../results/MSE_features_", exe_num, ".pdf", sep="")
 pdf(pdfFileNameMSE)
 p <- ggplot(data=dd_sorted_MSE_only, aes(x=reorder(features, -pos), y=IncMSE)) +  geom_bar(stat="identity", fill="steelblue")  + labs(title = "Feature importance on accuracy reduction", y = "accuracy reduction", x = "features")
-p + coord_flip()
+p <- p + coord_flip()
+plot(p)
 dev.off()
 
 
-pdfFileNameGini <-  paste("../results/barplots/Gini_features_", exe_num, ".pdf", sep="")
+pdfFileNameGini <-  paste("../results/Gini_features_", exe_num, ".pdf", sep="")
 pdf(pdfFileNameGini)
 p <- ggplot(data=dd_sorted_IncNodePurity_only, aes(x=reorder(features, -pos), y=IncNodePurity)) +  geom_bar(stat="identity", fill="steelblue")  + labs(title = "Feature importance on Gini impurity", y = "Gini impurity", x = "features")
-p + coord_flip()
-p
+p <- p + coord_flip()
+plot(p)
 dev.off()
 
 
-pdfFile_plot_death_serum_creatinine <- paste("../results/plot_death_VS_serum_creatinine_", exe_num, ".pdf", sep="")
+pdfFile_plot_death_serum_creatinine <- paste("../results/plot_death_VS_serum_creatinine_NORM_", exe_num, ".pdf", sep="")
 pdf(pdfFile_plot_death_serum_creatinine)
-plot_death_serum_creatinine <-  cdplot(factor(death_event, labels=c("alive", "dead")) ~ serum_creatinine, data=patients_data, ylab = NA)
+plot_death_serum_creatinine <-  cdplot(factor(death_event, labels=c("alive", "dead")) ~ serum_creatinine, data=patients_data_norm, ylab = NA, xlab="serum creatinine")
+# plot(plot_death_serum_creatinine)
 dev.off()
 
-pdfFile_plot_death_ejection_fraction <- paste("../results/plot_death_VS_ejection_fraction_", exe_num, ".pdf", sep="")
+pdfFile_plot_death_ejection_fraction <- paste("../results/plot_death_VS_ejection_fraction_NORM_", exe_num, ".pdf", sep="")
 pdf(pdfFile_plot_death_ejection_fraction)
-plot_death_ejection_fraction <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ ejection_fraction, data=patients_data, ylab = NA)
+plot_death_ejection_fraction <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ ejection_fraction, data=patients_data_norm, ylab = NA, xlab="ejection fraction")
+#plot(plot_death_ejection_fraction)
 dev.off()
 
 # pdfFile_plot_death_age <- paste("../results/plot_death_VS_age_", exe_num, ".pdf", sep="")
@@ -93,35 +100,45 @@ dev.off()
 # plot_death_age <- cdplot(factor(death_event, labels=c("alive", "dead")) ~ age,, data=patients_data, ylab = NA)
 # dev.off()
 
+num_of_patients <- dim(patients_data_norm)[1]
+num_of_features <- dim(patients_data_norm)[2] - 1
+
 #
 # Pearson correlation coefficient
 #
-pearson_death_serum_creatinine <- cor(patients_data_norm$death_event, patients_data_norm$serum_creatinine, method = c("pearson"))
-pearson_death_ejection_fraction <- cor(patients_data_norm$death_event, patients_data_norm$ejection_fraction, method = c("pearson"))
-pearson_death_age <- cor(patients_data_norm$death_event, patients_data_norm$age, method = c("pearson"))
 
-pearson_death_creatinine_phosphokinase <- cor(patients_data_norm$death_event, patients_data_norm$creatinine_phosphokinase, method = c("pearson"))
-pearson_death_serum_sodium <- cor(patients_data_norm$death_event, patients_data_norm$serum_sodium, method = c("pearson"))
-pearson_death_gender<- cor(patients_data_norm$death_event, patients_data_norm$gender, method = c("pearson"))
+i <- 1
+for (i in 1:num_of_features) {
 
-pearson_death_platelets <- cor(patients_data_norm$death_event, patients_data_norm$platelets, method = c("pearson"))
-pearson_death_smoking <- cor(patients_data_norm$death_event, patients_data_norm$smoking, method = c("pearson"))
-pearson_death_blood_pressure <- cor(patients_data_norm$death_event, patients_data_norm$blood_pressure, method = c("pearson"))
+    thisPCC <- cor(patients_data_norm$death_event, patients_data_norm[,i], method = c("pearson"))
 
-pearson_death_diabetes <- cor(patients_data_norm$death_event, patients_data_norm$diabetes, method = c("pearson"))
-pearson_death_anaemia <- cor(patients_data_norm$death_event, patients_data_norm$anaemia, method = c("pearson"))
+    cat("pearson(death_event, ", colnames(patients_data_norm)[i],")  = ", dec_two(thisPCC), "\n", sep="")
+}
 
-cat("pearson_death_serum_creatinine  = ", pearson_death_serum_creatinine, "\n", sep="")
-cat("pearson_death_ejection_fraction  = ", pearson_death_ejection_fraction, "\n", sep="")
-cat("pearson_death_age  = ", pearson_death_age, "\n", sep="")
-cat("pearson_death_creatinine_phosphokinase  = ", pearson_death_creatinine_phosphokinase, "\n", sep="")
-cat("pearson_death_gender  = ", pearson_death_gender, "\n", sep="")
-cat("pearson_death_platelets  = ", pearson_death_platelets, "\n", sep="")
-cat("pearson_death_smoking  = ", pearson_death_smoking, "\n", sep="")
-cat("pearson_death_blood_pressure  = ", pearson_death_blood_pressure, "\n", sep="")
-cat("pearson_death_diabetes  = ", pearson_death_diabetes, "\n", sep="")
-cat("pearson_death_anaemia  = ", pearson_death_anaemia, "\n", sep="")
+# 
+# Kendall
+# 
+i <- 1
+for (i in 1:num_of_features) {
 
+    thisKendall <- cor(patients_data_norm$death_event, patients_data_norm[,i], method = c("kendall"))
+
+    cat("kendall(death_event, ", colnames(patients_data_norm)[i],")  = ", dec_two(thisKendall), "\n", sep="")
+}
+
+
+# Pearson correlation coefficients
+# 0.37
+# -0.26
+# 0.24
+# 0.03
+# -0.20
+# -0.00
+# -0.04
+# -0.01
+# 0.08
+# -0.00
+# 0.07
 
 
 # Print the model tree
@@ -130,14 +147,17 @@ cat("pearson_death_anaemia  = ", pearson_death_anaemia, "\n", sep="")
 dotSize <- 3
 pdfHeight <- 10 # inches
 pdfWidth <- 20 # inches
+textSize <- 30
 
 pdfFile_dfFile_plot_death_age <- paste("../results/scatterplot_serum_creatinine_VS_ejection_fraction_", exe_num, ".pdf", sep="")
 pdf(pdfFile_dfFile_plot_death_age, height=pdfHeight, width=pdfWidth)
-ggplot(patients_data, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  +  labs(colour="patient status", size="") + theme(text = element_text(size=30))
+p <- ggplot(patients_data, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  + xlab("serum creatinine")   + ylab("ejection fraction") +  labs(colour="patient status", size="") + theme(text = element_text(size=textSize))
+plot(p)
 dev.off()
 
 
 pdfFile_dfFile_plot_death_age_withLine <- paste("../results/scatterplot_serum_creatinine_VS_ejection_fraction_withLine_", exe_num, ".pdf", sep="")
 pdf(pdfFile_dfFile_plot_death_age_withLine, height=pdfHeight, width=pdfWidth)
-ggplot(patients_data, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  +  labs(colour="patient status", size="") + geom_abline(intercept = 0.01, slope = 15, linetype="dashed") + theme(text = element_text(size=30))
+p <- ggplot(patients_data, aes(x=serum_creatinine, y=ejection_fraction, color=factor(death_event, labels = c("alive", "dead")), shape=factor(death_event, labels = c("alive", "dead")) )) + geom_point(size = dotSize)  + xlab("serum creatinine")   + ylab("ejection fraction") +  labs(colour="patient status", size="", shape="") + geom_abline(intercept = 0.01, slope = 15, linetype="dashed") + theme(text = element_text(size=textSize)) + scale_shape(guide = 'none')
+plot(p)
 dev.off()

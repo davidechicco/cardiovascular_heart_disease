@@ -424,29 +424,29 @@ local indexVect = {};
 for i=1, #patients_vett do indexVect[i] = i;  end
 permutedIndexVect = permute(indexVect, #indexVect, #indexVect);
 
--- VALIDATION_SET_PERC = 20
-TEST_SET_SIZE = 65
+-- -- VALIDATION_SET_PERC = 20
+-- -- TEST_SET_SIZE = 65
+-- -- 
+-- -- local validation_set_size = 65
+-- -- round((VALIDATION_SET_PERC*(#patients_vett-TEST_SET_SIZE))/100)
+-- -- 
+-- -- print("training_set_size = "..((#patients_vett-TEST_SET_SIZE)-validation_set_size).." elements");
+-- -- print("validation_set_size = "..validation_set_size.." elements\n");
+-- -- print("TEST_SET_SIZE = "..TEST_SET_SIZE.." elements\n");
 
-local validation_set_size = 65
--- round((VALIDATION_SET_PERC*(#patients_vett-TEST_SET_SIZE))/100)
 
-print("training_set_size = "..((#patients_vett-TEST_SET_SIZE)-validation_set_size).." elements");
+
+TRAINING_SET_PERC = 60
+VALIDATION_SET_PERC = 20
+TEST_SET_PERC = 20
+
+local training_set_size = round((TRAINING_SET_PERC*(#patients_vett)/100))
+local validation_set_size = round((VALIDATION_SET_PERC*(#patients_vett)/100))
+TEST_SET_SIZE = (#patients_vett) - training_set_size - validation_set_size
+
+print("training_set_size = "..training_set_size.." elements");
 print("validation_set_size = "..validation_set_size.." elements\n");
 print("TEST_SET_SIZE = "..TEST_SET_SIZE.." elements\n");
-
-
-
--- TRAINING_SET_PERC = 60
--- VALIDATION_SET_PERC = 20
--- TEST_SET_PERC = 20
--- 
--- local training_set_size = round((TRAINING_SET_PERC*(#patients_vett)/100))
--- local validation_set_size = round((VALIDATION_SET_PERC*(#patients_vett)/100))
--- TEST_SET_SIZE = (#patients_vett) - TRAINING_SET_PERC - VALIDATION_SET_PERC
--- 
--- print("training_set_size = "..training_set_size.." elements");
--- print("validation_set_size = "..validation_set_size.." elements\n");
--- print("TEST_SET_SIZE = "..TEST_SET_SIZE.." elements\n");
 
 
 
