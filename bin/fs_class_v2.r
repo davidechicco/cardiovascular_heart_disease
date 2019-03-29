@@ -222,7 +222,7 @@ borda <- sort(borda,decreasing = FALSE)
 n_top_feats <- 2
 top_feats <- names(borda)[1:n_top_feats]
 
-cat("\nHere are the top", n_top_feats, " features:\n", sep="")
+cat("\n\nHere are the top", n_top_feats, " features:\n", sep="")
 print(top_feats)
 
 # Now I build a few models
