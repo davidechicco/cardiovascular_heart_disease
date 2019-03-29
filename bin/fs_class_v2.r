@@ -16,6 +16,8 @@ libraries(list.of.packages)
 
 # # # # # # # # # # # # # # # # # # 
 
+# confusion matrix tau threshold
+CF_TAU <- 0.5
 
 mean.fun <- function(d, i)
 {    
@@ -124,8 +126,8 @@ classif <- function(method, the_train, the_test, feats)
   
   if(method=="xgb"){
     ee <- xgboost(data = as.matrix(the_train[,feats]), label = the_train$death_event,nrounds = 25, silent=0,objective = "binary:logistic", verbose=0)
-    cf_tr <- confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_train[,feats]))>0.5)),as.factor(the_train$death_event))$table
-    cf_ts <- confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_test[,feats]))>0.5)),as.factor(the_test$death_event))$table
+    cf_tr <- confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_train[,feats]))>CF_TAU)),as.factor(the_train$death_event))$table
+    cf_ts <- confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_test[,feats]))>CF_TAU)),as.factor(the_test$death_event))$table
   }
   
   row.names(cf_tr) <- NULL
@@ -149,7 +151,7 @@ classif <- function(method, the_train, the_test, feats)
 
 
 # load data
-all_data <- read.table("../data/dataset_edited_without_time_NORM.csv",sep=",",header=TRUE)
+all_data <- read.table("../data/dataset_edited_without_time.csv",sep=",",header=TRUE)
 N_data <- dim(all_data)[1]
 names(all_data)
 all_features <- names(all_data)[!names(all_data) %in% "death_event"]
@@ -216,7 +218,7 @@ names(borda) <- all_features
 for(feat in all_features) borda[feat]=mean(M[,feat])
 borda <- sort(borda,decreasing = FALSE)
 
-# So pick up the two best features, serum_creatinine and ejection_fraction
+# So pick up the two best features: serum_creatinine and ejection_fraction
 n_top_feats <- 2
 top_feats <- names(borda)[1:n_top_feats]
 
