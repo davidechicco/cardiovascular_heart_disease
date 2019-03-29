@@ -13,6 +13,8 @@ if(length(new.packages)) install.packages(new.packages)
 library("easypackages")
 libraries(list.of.packages)
 
+source("/home/davide/GitHub_general_project/general_project/bin/utils.r")
+
 
 # # # # # # # # # # # # # # # # # # 
 
@@ -253,18 +255,10 @@ SVM_MCCs<- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["svm"]][["T
 XGB_MCCs <- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["xgb"]][["TS"]][["MCC"]]}))
 
 cat("\nconfidence_intervals(RF_MCCs)\n")
-print(confidence_intervals(RF_MCCs))
-#lower      mean     upper 
-#0.3615325 0.3878802 0.4115064 
+print(dec_two(confidence_intervals(RF_MCCs)))
 
 cat("\nconfidence_intervals(SVM_MCCs)\n")
-print(confidence_intervals(SVM_MCCs))
-#lower      mean     upper 
-#0.2765017 0.3082027 0.3389029 
+print(dec_two(confidence_intervals(SVM_MCCs)))
 
 cat("\nconfidence_intervals(XGB_MCCs)\n")
-print(confidence_intervals(XGB_MCCs))
-#lower      mean     upper 
-#0.3628287 0.3936713 0.4227421 
-
-
+print(dec_two(confidence_intervals(XGB_MCCs)))
