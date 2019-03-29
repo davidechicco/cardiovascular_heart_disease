@@ -26,7 +26,7 @@ mean.fun <- function(d, i)
 }
 
 # ci function
-ci <- function(data){
+confidence_intervals <- function(data){
   
   thisDataFrame <- as.data.frame( cbind(seq(length(data)),data)  )
   VALUE_COL <- 2
@@ -130,7 +130,7 @@ classif <- function(method, the_train, the_test, feats)
   
   row.names(cf_tr) <- NULL
   colnames(cf_tr) <- NULL
-  cf_tr <- matrix(cf_tr,nrow = 2)
+  cf_tr <- matrix(cf_tr, nrow = 2)
   res[["TR"]] <- list()
   res[["TR"]][["ConfMat"]] <- cf_tr
   res[["TR"]][["MCC"]] <- mcc(confusionM = cf_tr)
@@ -158,8 +158,8 @@ methods=c("relief", "MMPC", "RF", "oneR", "rpart", "lsvm","xgboost")
 
 # generate 10 splits 80%/20% stratified
 attach(all_data)
-idx_class0 <- which(death_event==0,arr.ind = TRUE)
-idx_class1 <- which(death_event==1,arr.ind = TRUE)
+idx_class0 <- which(death_event==0, arr.ind = TRUE)
+idx_class1 <- which(death_event==1, arr.ind = TRUE)
 
 set.seed(42)
 trts_ratio <- 0.7
@@ -170,11 +170,12 @@ els_tr_cl1 <- round(trts_ratio*length(idx_class1))
 
 n_sets <- 50
 splits <- list()
+cat("ranker() loop  ", sep="")
 
 for(i in 1:n_sets)
 {
   # cat("i=", i, ") out of ", n_sets, " n_sets\n", sep="")
-  cat("(i=", i, ") \t", sep="")
+  cat("\n (i=", i, ") ", sep="")
   
   splits[[i]] <- list()
   this_idx_class0 <- sample(idx_class0)
@@ -184,6 +185,7 @@ for(i in 1:n_sets)
   splits[[i]][["ranked_list"]] <- list()
   for(nn in methods)  
   { 
+        cat(nn, " ", sep="")
         splits[[i]][["ranked_list"]][[nn]] <- ranker(data=all_data, train_indices=splits[[i]][["TR"]], method=nn) 
    }
 }
@@ -192,10 +194,16 @@ M <- as.data.frame(matrix(NA,n_sets*length(methods),length(all_features)+2))
 colnames(M) <- c("set","method",all_features)
 j <- 0
 
+cat("\nmatch() loop ")
 for(i in 1:n_sets)
 {
+  cat("\n(i=", i, ") ", sep="")
+
   for(nn in methods)
-  {
+  { 
+  
+    cat(nn, " ", sep="")
+  
     j <- j+1
     M[j,"set"] <- i
     M[j,"method"] <- nn
@@ -215,8 +223,11 @@ top_feats <- names(borda)[1:n_top_feats]
 
 # Now I build a few models
 
+cat("\ntrain and test loop ", sep="")
 all_methods <- c("rf","svm","xgb")
 for(i in 1:n_sets){
+
+     cat("\n(i=", i, ") ", sep="")
   
     splits[[i]][["top_feats"]] <- list()
     splits[[i]][["top_feats"]][["feats"]] <- top_feats
@@ -226,6 +237,8 @@ for(i in 1:n_sets){
 
     for(m in all_methods)
     {
+    cat(m, " ", sep="")
+    
         splits[[i]][["top_feats"]][[m]] <- classif(method=m, the_train=this_train, the_test=this_test, feats=top_feats)
     }
 }
@@ -235,18 +248,18 @@ RF_MCCs <- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["rf"]][["TS
 SVM_MCCs<- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["svm"]][["TS"]][["MCC"]]}))
 XGB_MCCs <- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["xgb"]][["TS"]][["MCC"]]}))
 
-print("ci(RF_MCCs)")
-print(ci(RF_MCCs))
+cat("\nconfidence_intervals(RF_MCCs)")
+print(confidence_intervals(RF_MCCs))
 #lower      mean     upper 
 #0.3615325 0.3878802 0.4115064 
 
-print("ci(SVM_MCCs)")
-print(ci(SVM_MCCs))
+cat("\nconfidence_intervals(SVM_MCCs)")
+print(confidence_intervals(SVM_MCCs))
 #lower      mean     upper 
 #0.2765017 0.3082027 0.3389029 
 
-print("ci(XGB_MCCs)")
-print(ci(XGB_MCCs))
+cat("\nconfidence_intervals(XGB_MCCs)")
+print(confidence_intervals(XGB_MCCs))
 #lower      mean     upper 
 #0.3628287 0.3936713 0.4227421 
 
