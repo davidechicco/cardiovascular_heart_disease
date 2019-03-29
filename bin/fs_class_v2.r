@@ -222,6 +222,8 @@ borda <- sort(borda,decreasing = FALSE)
 n_top_feats <- 2
 top_feats <- names(borda)[1:n_top_feats]
 
+cat("\nHere are the top", n_top_feats, " features:\n", sep="")
+print(top_feats)
 
 # Now I build a few models
 
@@ -250,17 +252,17 @@ RF_MCCs <- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["rf"]][["TS
 SVM_MCCs<- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["svm"]][["TS"]][["MCC"]]}))
 XGB_MCCs <- unlist(lapply(splits, FUN = function(x){x[["top_feats"]][["xgb"]][["TS"]][["MCC"]]}))
 
-cat("\nconfidence_intervals(RF_MCCs)")
+cat("\nconfidence_intervals(RF_MCCs)\n")
 print(confidence_intervals(RF_MCCs))
 #lower      mean     upper 
 #0.3615325 0.3878802 0.4115064 
 
-cat("\nconfidence_intervals(SVM_MCCs)")
+cat("\nconfidence_intervals(SVM_MCCs)\n")
 print(confidence_intervals(SVM_MCCs))
 #lower      mean     upper 
 #0.2765017 0.3082027 0.3389029 
 
-cat("\nconfidence_intervals(XGB_MCCs)")
+cat("\nconfidence_intervals(XGB_MCCs)\n")
 print(confidence_intervals(XGB_MCCs))
 #lower      mean     upper 
 #0.3628287 0.3936713 0.4227421 
