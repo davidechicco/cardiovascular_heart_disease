@@ -201,6 +201,9 @@ classif <- function(method, the_train, the_test, feats)
     cf_tr <- confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_train[,feats]))>CF_TAU)),as.factor(the_train$death_event))$table
     cf_ts <- confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_test[,feats]))>CF_TAU)),as.factor(the_test$death_event))$table
     
+#     print("confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_test[,feats]))>CF_TAU)),as.factor(the_test$death_event))")
+#     print(confusionMatrix(as.factor(as.numeric(predict(ee,as.matrix(the_test[,feats]))>CF_TAU)),as.factor(the_test$death_event)))
+#     
     predicted_values <- predict(ee,as.matrix(the_test[,feats]))
     actual_values <- the_test$death_event
   }
@@ -230,11 +233,14 @@ classif <- function(method, the_train, the_test, feats)
   res[["TS"]][["ConfMat"]] <- cf_ts
   res[["TS"]][["MCC"]] <- mcc(confusionM = cf_ts)
   
-  TP <- cf_ts[1,1]
-  FN <- cf_ts[2,1]
+  TN <- cf_ts[1,1]
+  FP <- cf_ts[2,1]
   
-  TN <- cf_ts[2,2]
-  FP <- cf_ts[1,2]
+  TP <- cf_ts[2,2]
+  FN <- cf_ts[1,2]
+  
+#   cat("cf_ts")
+#   print(cf_ts)
   
   this_f1_score <- 2*TP / (2*TP + FP + FN)
   this_accuracy <- (TN+TP) / (TN + TP + FP + FN)
@@ -274,8 +280,11 @@ els_tr_cl1 <- round(trts_ratio*length(idx_class1))
 
 
 
-n_sets <- 100 # 50
-cat("reset n_sets to 50\n\n\n")
+n_sets <- 100  # 50
+
+if(n_sets != 100) cat("reset n_sets must be set to 100\n\n\n")
+
+
 splits <- list()
 cat("ranker() loop  ", sep="")
 
