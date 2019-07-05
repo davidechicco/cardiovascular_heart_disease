@@ -13,12 +13,10 @@ if(length(new.packages)) install.packages(new.packages)
 library("easypackages")
 libraries(list.of.packages)
 
-source("/home/davide/GitHub_general_project/general_project/bin/utils.r")
+source("./utils.r")
 # source("/home/davide/GitHub_general_project/general_project/bin/confusion_matrix.r")
 datasetFile <- "../data/dataset_edited_without_time.csv"
-# set.seed(43)
-
-# targetName <- "death_event"
+targetName <- "death_event"
 
 # "death_event" is the target here
 
@@ -280,7 +278,7 @@ els_tr_cl1 <- round(trts_ratio*length(idx_class1))
 
 
 
-n_sets <- 100  # 50
+n_sets <- 10  # 50
 
 if(n_sets != 100) cat("reset n_sets must be set to 100\n\n\n")
 
@@ -323,7 +321,7 @@ for(i in 1:n_sets)
     j <- j+1
     M[j,"set"] <- i
     M[j,"method"] <- nn
-    M[j,3:13] <- match(all_features,splits[[i]][["ranked_list"]][[nn]])
+    M[j,3:(length(all_features)+2)] <- match(all_features,splits[[i]][["ranked_list"]][[nn]])
   }
 }
 
