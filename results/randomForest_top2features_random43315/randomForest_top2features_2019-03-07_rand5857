@@ -1,0 +1,75 @@
+fileName = ../data/dataset_edited_without_time.csv
+[Randomizing the rows]Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+reating the training set and test set for the values]
+[feature selection set dimensions:  90  patients]
+[training set dimensions:  151  patients]
+[test set dimensions:  58  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+patients_data_feature_selection:
+ [Dataset size]
+number of data instances (rows) = 90 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 58]
+64.44%
+[class: 1  #elements = 32]
+35.56%
+
+patients_data_train:
+ [Dataset size]
+number of data instances (rows) = 151 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 107]
+70.86%
+[class: 1  #elements = 44]
+29.14%
+
+patients_data_test:
+ [Dataset size]
+number of data instances (rows) = 58 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 38]
+65.52%
+[class: 1  #elements = 20]
+34.48%
+
+
+[Training the random forest classifier on the training set]
+
+Features used in this prediction: 	death_event ~ .
+
+thisTopFeatures: 
+[1] "serum_creatinine" "age"             
+
+Features used in this prediction: 	death_event ~ serum_creatinine + age
+
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.4398521
+ROC AUC 		0.6098684
+
+
+TOTAL:
+
+ FN =  13  /  20 	 (truth == 1) & (prediction < threshold)
+ TP =  7  /  20 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  9  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.12 	 0.39 	 0.62 	 0.35 	 0.76		 0.44		0.61
+

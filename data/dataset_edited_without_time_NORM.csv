@@ -1,4 +1,4 @@
-"gender","smoking","diabetes","blood_pressure","anaemia","age","ejection_fraction","serum_sodium","serum_creatinine","platelets","creatinine_phosphokinase","death_event"
+"sex","smoking","diabetes","high_blood_pressure","anaemia","age","ejection_fraction","serum_sodium","serum_creatinine","platelets","creatinine_phosphokinase","death_event"
 0,0,0,0,1,0.065217391304348,0.625,0.538461538461538,0.256410256410256,0.417142857142857,0.613526570048309,0
 1,1,1,0,1,0.717391304347826,0.3125,0.807692307692308,0.205128205128205,0.142857142857143,0.468599033816425,0
 1,1,0,1,0,0.673913043478261,0.1875,0.5,0.41025641025641,0.52,0.695652173913043,1

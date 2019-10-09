@@ -1,5 +1,74 @@
 options(stringsAsFactors = FALSE)
 
+list.of.packages <- c("easypackages", "ggplot2")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+library("easypackages")
+libraries(list.of.packages)
+
+
+
+
+# barplot of 
+barPlotOfRanking <- function(rankingDataFrame, valuesToRank, featuresCol, positionCol, exe_num, x_label, y_label, x_upper_lim) 
+{
+        library("ggplot2")
+
+        dotSize <- 3
+        pdfHeight <- 10 # inches
+        pdfWidth <- 20 # inches
+        textSize <- 30
+        
+        mkDirResultsCommand <- "mkdir -p ../results/"
+        system(mkDirResultsCommand)
+        cat("just run the command: ", mkDirResultsCommand, "\n", sep="")
+        
+        thisPdfFile <-  paste("../results/", y_label, "_features_", exe_num, ".pdf", sep="")
+        pdf(thisPdfFile)
+        p <- ggplot(data=rankingDataFrame, aes(x=reorder(featuresCol, -positionCol), y=valuesToRank)) +  geom_bar(stat="identity", fill="steelblue")  + labs(title = paste("Feature ranking on ", y_label, sep=""), y = y_label, x = x_label)        
+        
+        if ( x_upper_lim !=-1 ) {
+            p <- p + coord_flip(ylim = c(0, x_upper_lim))
+        } else {
+            p <- p + coord_flip()
+        }
+        
+        
+        plot(p)
+        cat("saved plot in file ", thisPdfFile, "\n", sep="")
+        dev.off()
+}
+
+
+
+# remove underscore and dot
+removeUnderscoreAndDot <- function (thisString)
+{
+    result <- removeUnderscore(removeDot(thisString))
+    return(result)
+}
+
+# remove underscore
+removeUnderscore <- function (thisString)
+{
+    result <- gsub("_", " ", thisString)
+    return(result)
+}
+
+# remove dot
+removeDot <- function (thisString)
+{
+    result <- gsub("\\.", " ", thisString)
+    return(result)
+}
+
+
+# function that prints tgree decimals of a number
+dec_three <- function(x) {
+  return (format(round(x, 3), nsmall = 3));
+}
+
 # function that prints two decimals of a number
 dec_two <- function(x) {
   return (format(round(x, 2), nsmall = 2));

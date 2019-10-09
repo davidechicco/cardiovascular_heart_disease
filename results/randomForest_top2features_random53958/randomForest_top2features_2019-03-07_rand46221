@@ -1,0 +1,75 @@
+fileName = ../data/dataset_edited_without_time.csv
+[Randomizing the rows]Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+reating the training set and test set for the values]
+[feature selection set dimensions:  30  patients]
+[training set dimensions:  210  patients]
+[test set dimensions:  59  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+patients_data_feature_selection:
+ [Dataset size]
+number of data instances (rows) = 30 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 18]
+60.00%
+[class: 1  #elements = 12]
+40.00%
+
+patients_data_train:
+ [Dataset size]
+number of data instances (rows) = 210 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 143]
+68.10%
+[class: 1  #elements = 67]
+31.90%
+
+patients_data_test:
+ [Dataset size]
+number of data instances (rows) = 59 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 42]
+71.19%
+[class: 1  #elements = 17]
+28.81%
+
+
+[Training the random forest classifier on the training set]
+
+Features used in this prediction: 	death_event ~ .
+
+thisTopFeatures: 
+[1] "ejection_fraction" "serum_sodium"     
+
+Features used in this prediction: 	death_event ~ ejection_fraction + serum_sodium
+
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.5142648
+ROC AUC 		0.6729692
+
+
+TOTAL:
+
+ FN =  9  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  2  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  40  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.51 	 0.59 	 0.81 	 0.47 	 0.95		 0.51		0.67
+

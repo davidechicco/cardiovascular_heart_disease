@@ -1,0 +1,75 @@
+fileName = ../data/dataset_edited_without_time.csv
+[Randomizing the rows]Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+reating the training set and test set for the values]
+[feature selection set dimensions:  60  patients]
+[training set dimensions:  180  patients]
+[test set dimensions:  59  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+patients_data_feature_selection:
+ [Dataset size]
+number of data instances (rows) = 60 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 46]
+76.67%
+[class: 1  #elements = 14]
+23.33%
+
+patients_data_train:
+ [Dataset size]
+number of data instances (rows) = 180 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 116]
+64.44%
+[class: 1  #elements = 64]
+35.56%
+
+patients_data_test:
+ [Dataset size]
+number of data instances (rows) = 59 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 41]
+69.49%
+[class: 1  #elements = 18]
+30.51%
+
+
+[Training the random forest classifier on the training set]
+
+Features used in this prediction: 	death_event ~ .
+
+thisTopFeatures: 
+[1] "serum_sodium"      "ejection_fraction"
+
+Features used in this prediction: 	death_event ~ serum_sodium + ejection_fraction
+
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.3828942
+ROC AUC 		0.6504065
+
+
+TOTAL:
+
+ FN =  10  /  18 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  18 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  30  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.17 	 0.43 	 0.64 	 0.44 	 0.73		 0.38		0.65
+

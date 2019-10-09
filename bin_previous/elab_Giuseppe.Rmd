@@ -1,0 +1,111 @@
+---
+title: "Statistical test for the heart failure dataset (Ahmad et al. 2017, PlosOne)"
+author: "Giuseppe Jurman"
+date: "March, 1st 2019"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+We perform here a quick statistical exploration of the heart failure dataset originally analysed in [Ahmad et al., PlosONE, 2017](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0181001)
+
+To this aim we use an instance of the original data **without the time feature** and **not normalized**.
+
+First we load data (*Davide, just set your correct path if you want to run the notebook*)
+```{r, message=FALSE}
+library(readr)
+path_to_data <- "~/Google Drive/chicco_survival/data/"
+filename <- paste(path_to_data,"dataset_edited_without_time.csv",sep="")
+dataset_edited_without_time <- as.data.frame(read_csv(filename,))
+print(head(dataset_edited_without_time))
+```
+
+Now we set *death_event* as a **factor**, since the statistical tests want a factor as the second element of the "~" formula.
+```{r}
+dataset_edited_without_time$death_event <- 
+  as.factor(dataset_edited_without_time$death_event)
+```
+
+We proceed now with the computation of the four following statistical comparative tests:
+
+* *Wilcoxon rank test* (aka Mann–Whitney U test), applied the feature *feat* versus *death_event* to detect whether we can reject the null hypothesis that the distribution of the feature *feat* for the groups of samples tdefined by *death_event* are the same; here we cannot use the *Wilcoxon signed rank test*, which needs the samples to be paired. To apply this last method, we should use repeated subsampling.
+* *Kruskal Wallis test*, applied the feature *feat* versus *death_event* to detect whether we can reject the null hypothesis that the features *feat* of the samples grouped accordingly to *death_event* were selected from populations having the same distribution (it is indeed an extension of the Wilcoxon rank test);
+* *Chi squared test*, applied the feature *feat* versus *death_event* to detect whether there is a significant association between the two variables; **disclaimer**: it should be applied to contingency vectors (counts), thus applying to numerical variables may by inappropriate. Note that we need to set the parameter *simulate.p.value = TRUE* to avoid warnings due to the small sample size.
+
+plus the additional *Shapiro* test, which is applied to a *single* feature to detect whether *feat* has been extracted from a normal distribution.
+
+All the outputs of the tests are stored on the *alltests* lists, that we print at the end of the discussion.
+
+```{r}
+mycols <- names(dataset_edited_without_time)
+mycols <- mycols[mycols!="death_event"]
+
+alltests <- list()
+
+alltests[["Wilcoxon_rank"]] <- 
+  alltests[["Kruskal"]] <- 
+  alltests[["Chi"]] <- 
+  alltests[["Shapiro"]] <- list()
+
+for(thecol in mycols){
+  alltests[["Wilcoxon_rank"]][[thecol]] <- 
+    wilcox.test(as.formula(paste(thecol,"death_event",sep="~")), 
+                data=dataset_edited_without_time)
+  alltests[["Kruskal"]][[thecol]] <- 
+    kruskal.test(as.formula(paste(thecol,"death_event",sep="~")), 
+                 data=dataset_edited_without_time)
+  alltests[["Chi"]][[thecol]] <- 
+    chisq.test(x=as.factor(dataset_edited_without_time[,thecol]),
+               y=dataset_edited_without_time$death_event,
+               simulate.p.value = TRUE)
+  alltests[["Shapiro"]][[thecol]] <- 
+    shapiro.test(dataset_edited_without_time[,thecol])
+}
+alltests[["Shapiro"]][["death_event"]]<- 
+  shapiro.test(as.numeric(dataset_edited_without_time$death_event))
+```
+
+### Discussion
+As a rule of thumb, the validity of the tests is assessed by looking at the resulting $p$-values.
+
+We start with the Shapiro test of normality, 
+```{r}
+dummy <- c()
+for(thecol in c(mycols,"death_event")) dummy[thecol] <- alltests[["Shapiro"]][[thecol]]$p.value
+print(dummy)
+```
+The very $p$-values indicate that all the variables of the dataset can be considered as extracted from a normal distribution.
+
+We move now to the comparison of the *death_event* target with the other features of the dataset.
+
+For the Wilcoxon rank test (that is, the Mann–Whitney U test) $p$-values,
+```{r}
+dummy <- c()
+for(thecol in mycols) dummy[thecol] <-  round(alltests[["Wilcoxon_rank"]][[thecol]]$p.value,6)
+print(dummy)
+```
+we can say that the values of each of the features *age*, *ejection_fraction*, *serum_sodium* and *serum_creatinine* are extracted from different distributions between the samples in groups *death_event=0* and *death_event=1*, while null hypothesis of same distribution for the two groups of samples cannot be ruled out for *gender*, *smoking*, *diabetes*, *blood-pressure*, *anaemia*, *platelets* and *creatinine_phosphokinase*.
+
+For the Kruskal Wallis $p$-values,
+```{r}
+dummy <- c()
+for(thecol in mycols) dummy[thecol] <- round(alltests[["Kruskal"]][[thecol]]$p.value,6)
+print(dummy)
+```
+we can say that for *age*, *ejection_fraction*, *serum_sodium*, *serum_creatinine* the null hypothesis of same distribution for the two groups of samples *death_event=0* and *death_event=1* can be ruled out, while the same cannot be stated for *gender*, *smoking*, *diabetes*, *blood-pressure*, *anaemia*, *platelets* and *creatinine_phosphokinase*. This is consistent with the result of the Wilcoxon rank test, as expected.
+
+For the $\chi^2$ $p$-values,
+```{r}
+dummy <- c()
+for(thecol in mycols) dummy[thecol] <- round(alltests[["Chi"]][[thecol]]$p.value,6)
+print(dummy)
+```
+again we have the same results of the Wilcoxon rank and Kruskal Wallis tests, that is, only *age*, *ejection_fraction*, *serum_sodium*, *serum_creatinine* have a significant relation with *death_event*, while for the other features the null hypothesis of independence cannot be discarded.
+
+**Overall, we can conclude that these statistical tests indicate *age*, *ejection_fraction*, *serum_sodium*, *serum_creatinine* as the four important features of the dataset for discriminating survival as expressed by the *death_event* variable.**
+
+For completeness, we print out all the tests' outputs.
+```{r}
+print(alltests)
+```

@@ -1,0 +1,75 @@
+fileName = ../data/dataset_edited_without_time.csv
+[Randomizing the rows]Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+reating the training set and test set for the values]
+[feature selection set dimensions:  30  patients]
+[training set dimensions:  210  patients]
+[test set dimensions:  59  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+patients_data_feature_selection:
+ [Dataset size]
+number of data instances (rows) = 30 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 22]
+73.33%
+[class: 1  #elements = 8]
+26.67%
+
+patients_data_train:
+ [Dataset size]
+number of data instances (rows) = 210 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 146]
+69.52%
+[class: 1  #elements = 64]
+30.48%
+
+patients_data_test:
+ [Dataset size]
+number of data instances (rows) = 59 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 35]
+59.32%
+[class: 1  #elements = 24]
+40.68%
+
+
+[Training the random forest classifier on the training set]
+
+Features used in this prediction: 	death_event ~ .
+
+thisTopFeatures: 
+[1] "ejection_fraction" "platelets"        
+
+Features used in this prediction: 	death_event ~ ejection_fraction + platelets
+
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.5168349
+ROC AUC 		0.6125
+
+
+TOTAL:
+
+ FN =  20  /  24 	 (truth == 1) & (prediction < threshold)
+ TP =  4  /  24 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  35 	 (truth == 0) & (prediction >= threshold)
+ TN =  31  /  35 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.08 	 0.25 	 0.59 	 0.17 	 0.89		 0.52		0.61
+

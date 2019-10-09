@@ -1,0 +1,75 @@
+fileName = ../data/dataset_edited_without_time.csv
+[Randomizing the rows]Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+reating the training set and test set for the values]
+[feature selection set dimensions:  30  patients]
+[training set dimensions:  210  patients]
+[test set dimensions:  59  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+patients_data_feature_selection:
+ [Dataset size]
+number of data instances (rows) = 30 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 19]
+63.33%
+[class: 1  #elements = 11]
+36.67%
+
+patients_data_train:
+ [Dataset size]
+number of data instances (rows) = 210 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 148]
+70.48%
+[class: 1  #elements = 62]
+29.52%
+
+patients_data_test:
+ [Dataset size]
+number of data instances (rows) = 59 
+number of features (columns) = 12 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 36]
+61.02%
+[class: 1  #elements = 23]
+38.98%
+
+
+[Training the random forest classifier on the training set]
+
+Features used in this prediction: 	death_event ~ .
+
+thisTopFeatures: 
+[1] "serum_creatinine" "serum_sodium"    
+
+Features used in this prediction: 	death_event ~ serum_creatinine + serum_sodium
+
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7373932
+ROC AUC 		0.7741546
+
+
+TOTAL:
+
+ FN =  12  /  23 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  23 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.41 	 0.58 	 0.73 	 0.48 	 0.89		 0.74		0.77
+

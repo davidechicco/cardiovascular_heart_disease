@@ -1,0 +1,623 @@
+
+
+ @ @ @ @ @ @ START @ @ @ @ @ @ @ 	
+file: mesothelioma_ann_script_start.lua	
+author Davide Chicco <davide.chicco@gmail.com>	
+Mon Apr  8 11:58:05 2019	
+Readin' ../data/dataset_edited_without_time_NORM.csv	
+#max_values = 0	
+NORMALIZATION = false	
+Number of value profiles (rows) = 299	
+Number features (columns) = 11	
+Number of data instances (rows) = 299	
+training_set_size = 179 elements	
+validation_set_size = 60 elements
+	
+TEST_SET_SIZE = 60 elements
+	
+#patients_vett = 299	
+
+
+
+$$$ hidden_units = 5	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.088 	error progress = 5.63116%
+completion: 20% (epoch=100)(element=179) loss = 0.085 	error progress = 5.58908%
+completion: 30% (epoch=150)(element=179) loss = 0.055 	error progress = 5.463%
+completion: 40% (epoch=200)(element=179) loss = 0.011 	error progress = 5.2457%
+completion: 50% (epoch=250)(element=179) loss = 0.007 	error progress = 5.07408%
+completion: 60% (epoch=300)(element=179) loss = 0.007 	error progress = 4.95276%
+completion: 70% (epoch=350)(element=179) loss = 0.007 	error progress = 4.86105%
+completion: 80% (epoch=400)(element=179) loss = 0.005 	error progress = 4.78748%
+completion: 90% (epoch=450)(element=179) loss = 0.004 	error progress = 4.72608%
+completion: 100% (epoch=500)(element=179) loss = 0.002 	error progress = 4.67352%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 76.67%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.091204430967942	
+metrics area_roc = 72.91%	
+(beta) metrics area_precision_recall = 40.2%	
+TOTAL:	
+ FN = 10 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 7 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 4 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 39 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.37	
+
+::::	Matthews correlation coefficient = +0.37	::::
+	
+accuracy = 0.77 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.5 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.41 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.91 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus5_hl1_time1554739090	
+
+
+
+$$$ hidden_units = 10	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.082 	error progress = 5.67339%
+completion: 20% (epoch=100)(element=179) loss = 0.078 	error progress = 5.65065%
+completion: 30% (epoch=150)(element=179) loss = 0.067 	error progress = 5.61299%
+completion: 40% (epoch=200)(element=179) loss = 0.042 	error progress = 5.52032%
+completion: 50% (epoch=250)(element=179) loss = 0.011 	error progress = 5.35071%
+completion: 60% (epoch=300)(element=179) loss = 0.006 	error progress = 5.19697%
+completion: 70% (epoch=350)(element=179) loss = 0.006 	error progress = 5.08147%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 4.99156%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.91885%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.85807%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 78.33%	
+#FPplusFN=60	
+minError=11	minErrorIndex=1	globalThreshold =-0.058573952858454	
+metrics area_roc = 72.64%	
+(beta) metrics area_precision_recall = 40.65%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 4 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 39 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.43	
+
+::::	Matthews correlation coefficient = +0.43	::::
+	
+accuracy = 0.78 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.55 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.91 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus10_hl1_time1554739094	
+
+
+
+$$$ hidden_units = 25	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.082 	error progress = 5.91365%
+completion: 20% (epoch=100)(element=179) loss = 0.074 	error progress = 5.78084%
+completion: 30% (epoch=150)(element=179) loss = 0.037 	error progress = 5.57054%
+completion: 40% (epoch=200)(element=179) loss = 0.009 	error progress = 5.34491%
+completion: 50% (epoch=250)(element=179) loss = 0.007 	error progress = 5.18196%
+completion: 60% (epoch=300)(element=179) loss = 0.007 	error progress = 5.06353%
+completion: 70% (epoch=350)(element=179) loss = 0.007 	error progress = 4.97326%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 4.90168%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.84303%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.79364%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.067478369138883	
+metrics area_roc = 73.32%	
+(beta) metrics area_precision_recall = 38.09%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus25_hl1_time1554739099	
+
+
+
+$$$ hidden_units = 50	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.089 	error progress = 6.15448%
+completion: 20% (epoch=100)(element=179) loss = 0.076 	error progress = 5.86096%
+completion: 30% (epoch=150)(element=179) loss = 0.021 	error progress = 5.54321%
+completion: 40% (epoch=200)(element=179) loss = 0.009 	error progress = 5.3155%
+completion: 50% (epoch=250)(element=179) loss = 0.008 	error progress = 5.15859%
+completion: 60% (epoch=300)(element=179) loss = 0.007 	error progress = 5.0436%
+completion: 70% (epoch=350)(element=179) loss = 0.007 	error progress = 4.95528%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 4.88496%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.82737%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.77911%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.061339842495124	
+metrics area_roc = 73.6%	
+(beta) metrics area_precision_recall = 40.83%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus50_hl1_time1554739105	
+
+
+
+$$$ hidden_units = 75	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.085 	error progress = 6.44521%
+completion: 20% (epoch=100)(element=179) loss = 0.06 	error progress = 6.06281%
+completion: 30% (epoch=150)(element=179) loss = 0.028 	error progress = 5.74375%
+completion: 40% (epoch=200)(element=179) loss = 0.011 	error progress = 5.48762%
+completion: 50% (epoch=250)(element=179) loss = 0.009 	error progress = 5.30523%
+completion: 60% (epoch=300)(element=179) loss = 0.008 	error progress = 5.17038%
+completion: 70% (epoch=350)(element=179) loss = 0.008 	error progress = 5.06667%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 4.98422%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.91686%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.86058%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.064070724456221	
+metrics area_roc = 73.19%	
+(beta) metrics area_precision_recall = 40.1%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus75_hl1_time1554739112	
+
+
+
+$$$ hidden_units = 100	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.093 	error progress = 6.58215%
+completion: 20% (epoch=100)(element=179) loss = 0.08 	error progress = 6.15%
+completion: 30% (epoch=150)(element=179) loss = 0.045 	error progress = 5.82542%
+completion: 40% (epoch=200)(element=179) loss = 0.016 	error progress = 5.56061%
+completion: 50% (epoch=250)(element=179) loss = 0.01 	error progress = 5.36873%
+completion: 60% (epoch=300)(element=179) loss = 0.008 	error progress = 5.2266%
+completion: 70% (epoch=350)(element=179) loss = 0.007 	error progress = 5.11732%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 5.0305%
+completion: 90% (epoch=450)(element=179) loss = 0.006 	error progress = 4.95959%
+completion: 100% (epoch=500)(element=179) loss = 0.006 	error progress = 4.90035%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.076565205459678	
+metrics area_roc = 72.64%	
+(beta) metrics area_precision_recall = 39.8%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus100_hl1_time1554739121	
+
+
+
+$$$ hidden_units = 125	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.082 	error progress = 6.6651%
+completion: 20% (epoch=100)(element=179) loss = 0.055 	error progress = 6.11187%
+completion: 30% (epoch=150)(element=179) loss = 0.027 	error progress = 5.7406%
+completion: 40% (epoch=200)(element=179) loss = 0.015 	error progress = 5.48193%
+completion: 50% (epoch=250)(element=179) loss = 0.011 	error progress = 5.30107%
+completion: 60% (epoch=300)(element=179) loss = 0.01 	error progress = 5.16805%
+completion: 70% (epoch=350)(element=179) loss = 0.009 	error progress = 5.06599%
+completion: 80% (epoch=400)(element=179) loss = 0.009 	error progress = 4.98495%
+completion: 90% (epoch=450)(element=179) loss = 0.008 	error progress = 4.91885%
+completion: 100% (epoch=500)(element=179) loss = 0.008 	error progress = 4.8637%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=11	minErrorIndex=1	globalThreshold =-0.057637866094262	
+metrics area_roc = 73.19%	
+(beta) metrics area_precision_recall = 41.32%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus125_hl1_time1554739132	
+
+
+
+$$$ hidden_units = 150	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.089 	error progress = 6.79489%
+completion: 20% (epoch=100)(element=179) loss = 0.061 	error progress = 6.14963%
+completion: 30% (epoch=150)(element=179) loss = 0.025 	error progress = 5.75031%
+completion: 40% (epoch=200)(element=179) loss = 0.014 	error progress = 5.48607%
+completion: 50% (epoch=250)(element=179) loss = 0.01 	error progress = 5.3032%
+completion: 60% (epoch=300)(element=179) loss = 0.009 	error progress = 5.16932%
+completion: 70% (epoch=350)(element=179) loss = 0.008 	error progress = 5.06678%
+completion: 80% (epoch=400)(element=179) loss = 0.008 	error progress = 4.98544%
+completion: 90% (epoch=450)(element=179) loss = 0.008 	error progress = 4.91909%
+completion: 100% (epoch=500)(element=179) loss = 0.008 	error progress = 4.86374%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.066430183905474	
+metrics area_roc = 72.91%	
+(beta) metrics area_precision_recall = 39.94%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus150_hl1_time1554739145	
+
+
+
+$$$ hidden_units = 175	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.088 	error progress = 6.83304%
+completion: 20% (epoch=100)(element=179) loss = 0.06 	error progress = 6.16876%
+completion: 30% (epoch=150)(element=179) loss = 0.026 	error progress = 5.77025%
+completion: 40% (epoch=200)(element=179) loss = 0.014 	error progress = 5.50596%
+completion: 50% (epoch=250)(element=179) loss = 0.01 	error progress = 5.32262%
+completion: 60% (epoch=300)(element=179) loss = 0.009 	error progress = 5.1882%
+completion: 70% (epoch=350)(element=179) loss = 0.008 	error progress = 5.08514%
+completion: 80% (epoch=400)(element=179) loss = 0.008 	error progress = 5.00332%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.93654%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.8808%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.070780153356864	
+metrics area_roc = 72.64%	
+(beta) metrics area_precision_recall = 39.8%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus175_hl1_time1554739162	
+
+
+
+$$$ hidden_units = 200	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.085 	error progress = 6.87724%
+completion: 20% (epoch=100)(element=179) loss = 0.055 	error progress = 6.19405%
+completion: 30% (epoch=150)(element=179) loss = 0.027 	error progress = 5.79506%
+completion: 40% (epoch=200)(element=179) loss = 0.016 	error progress = 5.52972%
+completion: 50% (epoch=250)(element=179) loss = 0.012 	error progress = 5.34446%
+completion: 60% (epoch=300)(element=179) loss = 0.011 	error progress = 5.20814%
+completion: 70% (epoch=350)(element=179) loss = 0.01 	error progress = 5.10346%
+completion: 80% (epoch=400)(element=179) loss = 0.01 	error progress = 5.02032%
+completion: 90% (epoch=450)(element=179) loss = 0.009 	error progress = 4.9525%
+completion: 100% (epoch=500)(element=179) loss = 0.009 	error progress = 4.89594%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.046015265124857	
+metrics area_roc = 73.46%	
+(beta) metrics area_precision_recall = 40.78%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus200_hl1_time1554739182	
+
+
+
+$$$ hidden_units = 225	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.092 	error progress = 6.96772%
+completion: 20% (epoch=100)(element=179) loss = 0.066 	error progress = 6.24999%
+completion: 30% (epoch=150)(element=179) loss = 0.033 	error progress = 5.84706%
+completion: 40% (epoch=200)(element=179) loss = 0.017 	error progress = 5.57735%
+completion: 50% (epoch=250)(element=179) loss = 0.011 	error progress = 5.38734%
+completion: 60% (epoch=300)(element=179) loss = 0.009 	error progress = 5.24678%
+completion: 70% (epoch=350)(element=179) loss = 0.008 	error progress = 5.13847%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 5.05225%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.98175%
+completion: 100% (epoch=500)(element=179) loss = 0.006 	error progress = 4.92286%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.067914927772792	
+metrics area_roc = 73.05%	
+(beta) metrics area_precision_recall = 40.14%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus225_hl1_time1554739207	
+
+
+
+$$$ hidden_units = 250	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.082 	error progress = 7.02376%
+completion: 20% (epoch=100)(element=179) loss = 0.053 	error progress = 6.26249%
+completion: 30% (epoch=150)(element=179) loss = 0.026 	error progress = 5.85221%
+completion: 40% (epoch=200)(element=179) loss = 0.015 	error progress = 5.58306%
+completion: 50% (epoch=250)(element=179) loss = 0.011 	error progress = 5.39349%
+completion: 60% (epoch=300)(element=179) loss = 0.009 	error progress = 5.25284%
+completion: 70% (epoch=350)(element=179) loss = 0.008 	error progress = 5.14419%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 5.05752%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 4.9866%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.92731%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.058158370418058	
+metrics area_roc = 72.91%	
+(beta) metrics area_precision_recall = 36.99%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus250_hl1_time1554739236	
+
+
+
+$$$ hidden_units = 275	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.091 	error progress = 7.06892%
+completion: 20% (epoch=100)(element=179) loss = 0.071 	error progress = 6.30856%
+completion: 30% (epoch=150)(element=179) loss = 0.036 	error progress = 5.89402%
+completion: 40% (epoch=200)(element=179) loss = 0.017 	error progress = 5.61565%
+completion: 50% (epoch=250)(element=179) loss = 0.012 	error progress = 5.41979%
+completion: 60% (epoch=300)(element=179) loss = 0.009 	error progress = 5.27512%
+completion: 70% (epoch=350)(element=179) loss = 0.008 	error progress = 5.16378%
+completion: 80% (epoch=400)(element=179) loss = 0.007 	error progress = 5.07522%
+completion: 90% (epoch=450)(element=179) loss = 0.007 	error progress = 5.00289%
+completion: 100% (epoch=500)(element=179) loss = 0.007 	error progress = 4.94253%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.075671913977991	
+metrics area_roc = 73.05%	
+(beta) metrics area_precision_recall = 40.09%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus275_hl1_time1554739269	
+
+
+
+$$$ hidden_units = 300	 hidden_layers = 1 $$$	
+completion: 10% (epoch=50)(element=179) loss = 0.091 	error progress = 7.11191%
+completion: 20% (epoch=100)(element=179) loss = 0.066 	error progress = 6.29965%
+completion: 30% (epoch=150)(element=179) loss = 0.034 	error progress = 5.8762%
+completion: 40% (epoch=200)(element=179) loss = 0.018 	error progress = 5.5995%
+completion: 50% (epoch=250)(element=179) loss = 0.014 	error progress = 5.4059%
+completion: 60% (epoch=300)(element=179) loss = 0.012 	error progress = 5.26301%
+completion: 70% (epoch=350)(element=179) loss = 0.011 	error progress = 5.15302%
+completion: 80% (epoch=400)(element=179) loss = 0.01 	error progress = 5.06554%
+completion: 90% (epoch=450)(element=179) loss = 0.01 	error progress = 4.99411%
+completion: 100% (epoch=500)(element=179) loss = 0.01 	error progress = 4.93453%
+
+
+### executeTest(perceptron, validation_patient_profile)	
+
+Correct predictions = 80%	
+#FPplusFN=60	
+minError=12	minErrorIndex=1	globalThreshold =-0.039972117039915	
+metrics area_roc = 73.19%	
+(beta) metrics area_precision_recall = 40.23%	
+TOTAL:	
+ FN = 9 / 17	 (truth == 1) & (prediction < threshold)	
+ TP = 8 / 17	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 3 / 43	 (truth == 0) & (prediction >= threshold)	
+ TN = 40 / 43	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.47	
+
+::::	Matthews correlation coefficient = +0.47	::::
+	
+accuracy = 0.8 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.57 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.47 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.93 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+Saved model file: ./models/model_hus300_hl1_time1554739309	
+@ @ @ @ @ @ @ MCC_vect[1] =0.371 hidden units = 5  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[2] =0.425 hidden units = 10  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[3] =0.467 hidden units = 25  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[4] =0.467 hidden units = 50  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[5] =0.467 hidden units = 75  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[6] =0.467 hidden units = 100  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[7] =0.467 hidden units = 125  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[8] =0.467 hidden units = 150  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[9] =0.467 hidden units = 175  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[10] =0.467 hidden units = 200  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[11] =0.467 hidden units = 225  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[12] =0.467 hidden units = 250  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[13] =0.467 hidden units = 275  hidden layers = 1  @ @ @ @ @ @ @
+@ @ @ @ @ @ @ MCC_vect[14] =0.467 hidden units = 300  hidden layers = 1  @ @ @ @ @ @ @
+
+
+modelFileToLoad =./models/model_hus300_hl1_time1554739309	
+
+
+### executeTest(loadedModel, test_patient_profile)	
+
+Correct predictions = 68.33%	
+#FPplusFN=60	
+minError=16	minErrorIndex=1	globalThreshold =-0.11935912207301	
+metrics area_roc = 74.73%	
+(beta) metrics area_precision_recall = 45.66%	
+TOTAL:	
+ FN = 12 / 21	 (truth == 1) & (prediction < threshold)	
+ TP = 9 / 21	 (truth == 1) & (prediction >= threshold)
+	
+ FP = 7 / 39	 (truth == 0) & (prediction >= threshold)	
+ TN = 32 / 39	 (truth == 0) & (prediction < threshold)
+	
+signedMCC = +0.27	
+
+::::	Matthews correlation coefficient = +0.27	::::
+	
+accuracy = 0.68 = (tp + tn) / (tp + tn +fn + fp) 	  	 [worst = -1, best =  +1]	
+f1_score = 0.49 = (2*tp) / (2*tp+fp+fn) 	 [worst = 0, best = 1]	
+TP rate = 0.43 = TP rate = tp / (tp+fn) 	 [worst = 0, best = 1]	
+TN rate = 0.82 = TN rate = tn / (tn+fp) 	 [worst = 0, best = 1]	
+':':':':' lastMCC = 0.269  lastAccuracy = 0.683 ':':':':'	
+command: rm ./models/model_hus5_hl1_time1554739090 
+command: rm ./models/model_hus10_hl1_time1554739094 
+command: rm ./models/model_hus25_hl1_time1554739099 
+command: rm ./models/model_hus50_hl1_time1554739105 
+command: rm ./models/model_hus75_hl1_time1554739112 
+command: rm ./models/model_hus100_hl1_time1554739121 
+command: rm ./models/model_hus125_hl1_time1554739132 
+command: rm ./models/model_hus150_hl1_time1554739145 
+command: rm ./models/model_hus175_hl1_time1554739162 
+command: rm ./models/model_hus200_hl1_time1554739182 
+command: rm ./models/model_hus225_hl1_time1554739207 
+command: rm ./models/model_hus250_hl1_time1554739236 
+command: rm ./models/model_hus275_hl1_time1554739269 
+command: rm ./models/model_hus300_hl1_time1554739309 
+
+duration  complete execution: 224 seconds	
+duration  complete execution: 00 days, 00 hours, 03 minutes, 44 seconds	
