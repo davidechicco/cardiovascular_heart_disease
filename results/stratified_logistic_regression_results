@@ -1,0 +1,1430 @@
+Read data from file ../data/S1Data_EDITED.csv
+nrow(patients_data) = 299
+ncol(patients_data) = 14
+Number of executions = 100
+
+
+[Execution number 1 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 2 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 3 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 4 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 5 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 6 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 7 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 8 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 9 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 10 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 11 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 12 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 13 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 14 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 15 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 16 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 17 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 18 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 19 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 20 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 21 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 22 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 23 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 24 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 25 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 26 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 27 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 28 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 29 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 30 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 31 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 32 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 33 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 34 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 35 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 36 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 37 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 38 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 39 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 40 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 41 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 42 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 43 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 44 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 45 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 46 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 47 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 48 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 49 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 50 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 51 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 52 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 53 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 54 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 55 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 56 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 57 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 58 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 59 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 60 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 61 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 62 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 63 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 64 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 65 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 66 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 67 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 68 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 69 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 70 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 71 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 72 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 73 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 74 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 75 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 76 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 77 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 78 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 79 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 80 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 81 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 82 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 83 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 84 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 85 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 86 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 87 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 88 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 89 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 90 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 91 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 92 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 93 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 94 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 95 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 96 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 97 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 98 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 99 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+[Execution number 100 of the logistic regression]
+== temporary ranking == 
+top autoantibodies: 
+- - - - - - - - - - - - - - - - - - - - - 
+             Overall autoantibody
+Age        2.5893892          Age
+Anaemia    0.2833938      Anaemia
+BP         0.3930599           BP
+CPK        1.7547328          CPK
+Creatinine 3.4976731   Creatinine
+Diabetes   0.5244879     Diabetes
+- - - - - - - - - - - - - - - - - - - - - 
+
+
+
+ == final ranking after 100 executions
+                             autoantibody finalOverall finalPos
+factor(TIME_MONTH)7   factor(TIME_MONTH)7   5.43615654        1
+factor(TIME_MONTH)4   factor(TIME_MONTH)4   4.80178601        2
+factor(TIME_MONTH)8   factor(TIME_MONTH)8   4.76328437        3
+factor(TIME_MONTH)9   factor(TIME_MONTH)9   4.51253518        4
+Ejection Fraction       Ejection.Fraction   4.49280768        5
+factor(TIME_MONTH)5   factor(TIME_MONTH)5   4.35573897        6
+factor(TIME_MONTH)3   factor(TIME_MONTH)3   4.07227571        7
+serum creatinine                     Creatinine   3.49767308        8
+Age                                   Age   2.58938921        9
+factor(TIME_MONTH)6   factor(TIME_MONTH)6   1.89419680       10
+CPK                                   CPK   1.75473277       11
+Gender                             Gender   1.47397456       12
+Sodium                             Sodium   1.34683403       13
+Pletelets                       Pletelets   0.72787151       14
+factor(TIME_MONTH)2   factor(TIME_MONTH)2   0.56078055       15
+Diabetes                         Diabetes   0.52448790       16
+BP                                     BP   0.39305994       17
+Anaemia                           Anaemia   0.28339383       18
+Smoking                           Smoking   0.24966179       19
+factor(TIME_MONTH)10 factor(TIME_MONTH)10   0.01965397       20
+The final ranking contains 20 autoantibodies. The other ones were removed because of singularities
