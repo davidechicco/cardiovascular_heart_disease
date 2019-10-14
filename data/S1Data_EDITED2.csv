@@ -1,4 +1,3 @@
-,,,,,,,,,,,,,
 TIME_DAYS,TIME_MONTH,DEATH_EVENT,sex,smoking,diabetes,high_blood_pressure,anaemia,age,ejection_fraction,serum_sodium,serum_creatinine,platelets,creatinine_phosphokinase
 4,0,1,1,0,0,1,0,75,20,130,1.9,265000,582
 6,0,1,1,0,0,0,0,55,38,136,1.1,263358.03,7861
