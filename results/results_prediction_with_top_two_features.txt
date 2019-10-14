@@ -1,0 +1,90 @@
+
+:: Survival top 2 features ::
+
+Top 2 non-time features: ejection.fraction and serum creatinine
+
+
+> clinical_feature_ranking
+                       Overall    clinical_feature
+factor(TIME_MONTH)6 4.89337649 factor(TIME_MONTH)6
+factor(TIME_MONTH)3 4.64642818 factor(TIME_MONTH)3
+factor(TIME_MONTH)7 4.31178356 factor(TIME_MONTH)7
+factor(TIME_MONTH)8 4.25863182 factor(TIME_MONTH)8
+Ejection.Fraction   4.13938106   Ejection.Fraction	***
+factor(TIME_MONTH)4 3.77713487 factor(TIME_MONTH)4
+Creatinine          3.69917184          Creatinine	***
+factor(TIME_MONTH)2 3.69387726 factor(TIME_MONTH)2
+Age                 2.61938095                 Age
+factor(TIME_MONTH)5 1.98313828 factor(TIME_MONTH)5
+CPK                 1.88929235                 CPK
+Gender              1.32038950              Gender
+Pletelets           1.06270364           Pletelets
+BP                  0.79478093                  BP
+Anaemia             0.77547306             Anaemia
+factor(TIME_MONTH)1 0.72018791 factor(TIME_MONTH)1
+Smoking             0.65828165             Smoking
+Diabetes            0.60355319            Diabetes
+Sodium              0.54241360              Sodium
+factor(TIME_MONTH)9 0.02027515 factor(TIME_MONTH)9
+
+
+100 executions
+
+80% training set (and feature ranking set)
+20% test set
+
+
+
+PR AUC (integral) 	0.7146556
+ROC AUC 		0.9111111
+
+
+TOTAL:
+
+ FN =  1  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  5  /  45 	 (truth == 0) & (prediction >= threshold)
+ TN =  40  /  45 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.77 	 0.82 	 0.90 	 0.93 	 0.89		 0.71		0.91
+
+
+
+
+=== final results ===
+Number of executions = 100
+       MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean 0.616    0.719    0.838   0.785   0.860  0.617   0.822
+
+: : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :
+
+:: Survival with all the features ::
+
+PR AUC (integral) 	0.4060308
+ROC AUC 		0.8
+
+
+TOTAL:
+
+ FN =  2  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  50 	 (truth == 0) & (prediction >= threshold)
+ TN =  40  /  50 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	 MCC 	 F1_score 	 accuracy 	 TP_rate 	 TN_rate 	 PR AUC 	 ROC AUC
+@@@ Test set @@@      +0.49 	 0.57 	 0.80 	 0.80 	 0.80		 0.41		0.80
+
+
+
+
+=== final results ===
+Number of executions = 100
+       MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean 0.607    0.714    0.833   0.780   0.856  0.612   0.818

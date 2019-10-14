@@ -15,15 +15,11 @@ source("./confusion_matrix_rates.r")
 source("./utils.r")
 
 
-fileNameData<- "../data/S1Data_EDITED.csv"
+fileNameData<- "../data/S1Data_EDITED2.csv"
 targetName <- "DEATH_EVENT"
 patients_data <- read.csv(fileNameData, header = TRUE, sep =",")
 cat("Read data from file ", fileNameData, "\n", sep="")
 
-
-patients_data$"ptid" <- NULL
-patients_data$"transplant_date" <- NULL
-patients_data$"blood_collection_date" <- NULL
 
 # let's put the target label last on the right 
 patients_data <- patients_data%>%dplyr::select(-targetName,targetName)
@@ -41,7 +37,7 @@ exe_num <- sample(1:upper_num_limit, num_to_return)
 cat("nrow(patients_data) = ", nrow(patients_data), "\n", sep="")
 cat("ncol(patients_data) = ", ncol(patients_data), "\n", sep="")
 
-covariates <- c("Gender",    "Smoking",    "Diabetes",   "BP",    "Anaemia",    "Age",        "Ejection.Fraction",  "Sodium",    "Creatinine" ,   "Pletelets",  "CPK")
+covariates <- c("Gender", "Smoking", "Diabetes", "BP",    "Anaemia", "Age", "Ejection.Fraction", "Sodium", "Creatinine",   "Pletelets", "CPK")
 
 allExecutionsFinalRanking <- data.frame(Doubles=double(),
                  Ints=integer(),
@@ -63,30 +59,30 @@ for(exe_i in 1:execution_number)
         patients_data <- patients_data[sample(nrow(patients_data)),] 
 
 
-        glm_model <- glm(DEATH_EVENT ~ Gender +   Smoking +   Diabetes +  BP +   Anaemia +   Age +       Ejection.Fraction + Sodium +   Creatinine  +  Pletelets + CPK  + factor(TIME_MONTH), data = patients_data, family = "binomial")
+        glm_model <- glm(DEATH_EVENT ~ Gender + Smoking +   Diabetes + BP + Anaemia + Age + Ejection.Fraction + Sodium + Creatinine + Pletelets + CPK + factor(TIME_MONTH), data = patients_data, family = "binomial")
 
         # Does varImp select the top features or the less important?
 
         featureImportance <-  varImp(glm_model, scale = FALSE)
-        featureImportance$autoantibody <- row.names(featureImportance)
-        autoantibody_ranking <- featureImportance[order(featureImportance$"autoantibody"),]
+        featureImportance$clinical_feature <- row.names(featureImportance)
+        clinical_feature_ranking <- featureImportance[order(featureImportance$"clinical_feature"),]
         
-        # R Glm Coefficients: not defined because of singularities
-        # "You're probably getting that error because two or more of your independent variables are perfectly collinear"
-        # https://stats.stackexchange.com/a/22644
+        
+        
+        
         # https://stats.stackexchange.com/a/213020
 
         cat("== temporary ranking == \n")
-        cat("top autoantibodies: \n")
+        cat("top clinical_features: \n")
         cat("- - - - - - - - - - - - - - - - - - - - - \n")
-        print(head(autoantibody_ranking))
+        print((clinical_feature_ranking))
         cat("- - - - - - - - - - - - - - - - - - - - - \n")
 
         if (exe_i == 1) {
-                allExecutionsFinalRanking <- autoantibody_ranking
+                allExecutionsFinalRanking <- clinical_feature_ranking
         } else {        
         
-                allExecutionsFinalRanking$"Overall" <- allExecutionsFinalRanking$"Overall" + autoantibody_ranking$"Overall"
+                allExecutionsFinalRanking$"Overall" <- allExecutionsFinalRanking$"Overall" + clinical_feature_ranking$"Overall"
         }         
         
 
@@ -98,13 +94,13 @@ allExecutionsFinalRanking$"finalOverall" <- allExecutionsFinalRanking$"Overall" 
 allExecutionsFinalRanking <- allExecutionsFinalRanking[order(-allExecutionsFinalRanking$"finalOverall"), ]
 allExecutionsFinalRanking$"finalPos" <- c(1:dim(allExecutionsFinalRanking)[1])
 
-print((allExecutionsFinalRanking[, c("autoantibody", "finalOverall", "finalPos")]))
+print((allExecutionsFinalRanking[, c("clinical_feature", "finalOverall", "finalPos")]))
 
-cat("The final ranking contains ", nrow(allExecutionsFinalRanking), " autoantibodies. The other ones were removed because of singularities\n", sep="")
+# cat("The final ranking contains ", nrow(allExecutionsFinalRanking), " clinical_features. The other ones were removed because of singularities\n", sep="")
 
 
 # print file
-# autoantibodiesRankingFile <- paste0("../results/autoantibodies_log_reg_ranking_rand", exe_num, ".csv")
+# clinical_featuresRankingFile <- paste0("../results/clinical_features_log_reg_ranking_rand", exe_num, ".csv")
 
-# cat("\n\nThe autoantibodies ranking will be saved in the \n ", autoantibodiesRankingFile, " file\n", sep="")
-# write.csv(allExecutionsFinalRanking[, c("finalPos", "autoantibody", "finalOverall")], file=autoantibodiesRankingFile, row.names=FALSE)
+# cat("\n\nThe clinical_features ranking will be saved in the \n ", clinical_featuresRankingFile, " file\n", sep="")
+# write.csv(allExecutionsFinalRanking[, c("finalPos", "clinical_feature", "finalOverall")], file=clinical_featuresRankingFile, row.names=FALSE)
