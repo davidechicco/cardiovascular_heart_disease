@@ -30,7 +30,7 @@ pdfWidth <- 20 # inches
 textSize <- 30
         
 
-pdfFile_plot <- paste("../results/barplot_months_VS_deaths_", exe_num, ".pdf", sep="")
+pdfFile_plot <- paste("../results/barplot_months_VS_survivals_", exe_num, ".pdf", sep="")
 pdf(pdfFile_plot, height=pdfHeight, width=pdfWidth)
 
 p <- ggplot(data=monthDeathsData, aes(x=TIME_MONTH, y=survived_percent)) + geom_bar(stat="identity", fill="steelblue", width=0.5) + xlab("month")   + ylab("survived percentage %") + scale_x_continuous(breaks=c(0,1,2,3,4,5,6,7,8,9))  + theme(text = element_text(size=textSize)) 
