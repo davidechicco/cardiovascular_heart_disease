@@ -59,7 +59,7 @@ for(exe_i in 1:execution_number)
         patients_data <- patients_data[sample(nrow(patients_data)),] 
 
 
-        glm_model <- glm(DEATH_EVENT ~ Gender + Smoking +   Diabetes + BP + Anaemia + Age + Ejection.Fraction + Sodium + Creatinine + Pletelets + CPK + factor(TIME_MONTH), data = patients_data, family = "binomial")
+        glm_model <- glm(DEATH_EVENT ~ sex + smoking + diabetes + high_blood_pressure + anaemia + age + ejection_fraction + serum_sodium + serum_creatinine + platelets + creatinine_phosphokinase + factor(TIME_MONTH), data = patients_data, family = "binomial")
 
         # Does varImp select the top features or the less important?
 
