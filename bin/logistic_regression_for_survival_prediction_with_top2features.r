@@ -96,11 +96,11 @@ for(exe_i in 1:execution_number)
 
   cat("training the 2 feature model on the training set\n")
 
-  if( selectedFeatures[1] == "Ejection.Fraction" && selectedFeatures[2]=="Creatinine")
+  if( selectedFeatures[1] == "ejection_fraction" && selectedFeatures[2]=="serum_creatinine")
   {
 
     cat("creating the glm model on the 2 features\n")
-    glm_model2features <- glm(DEATH_EVENT ~ Ejection.Fraction + Creatinine + factor(TIME_MONTH), data = prc_data_train[,c(selectedFeatures, "DEATH_EVENT", "TIME_MONTH")], family = "binomial")
+    glm_model2features <- glm(DEATH_EVENT ~ ejection_fraction + serum_creatinine + factor(TIME_MONTH), data = prc_data_train[,c(selectedFeatures, "DEATH_EVENT", "TIME_MONTH")], family = "binomial")
 
     # thisFormula <- as.formula(paste(as.factor(colnames(patients_data)[target_index]), paste(selectedFeatures[1], selectedFeatures[2], factor(TIME_MONTH), sep='+'), sep=' ~ '))
     # glm_model2features <- glm(thisFormula, data = prc_data_train, family = "binomial")
