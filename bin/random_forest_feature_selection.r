@@ -62,8 +62,8 @@ agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
 #   targetName <- args[2]
 # }
 
-fileNameData <-  "/home/davide/projects/breast_cancer_Coimbra/data/dataR2_EDITED.csv"
-targetName <- "DIAGNOSIS"
+fileName <- "../data/dataset_edited_without_time.csv"
+targetName <- "death_event"
 
 # fileNameData <-  "/home/dave/cervical_cancer/cervical_arranged_NORM_ONLY_BIOPSY_TARGET.csv" 
 # targetName <- "Biopsy"
